@@ -6,13 +6,13 @@ class Users extends CI_Controller {
 	public function index() {
 		$this->load->view('loginRegView');
 	}
-
+	
 	public function register() {
 		$this->load->library("form_validation");
-		$this->form_validation->set_rules('firstName', 'First Name', 'trim|required');
-		$this->form_validation->set_rules('lastName', 'Last Name', 'trim|required');
+		$this->form_validation->set_rules('firstName', 'First Name', 'trim|required|alpha');
+		$this->form_validation->set_rules('lastName', 'Last Name', 'trim|required|alpha');
 		$this->form_validation->set_rules('email', 'Email', 'trim|required|valid_emails|is_unique[users.email]');
-		$this->form_validation->set_rules('password', 'Password', 'min_length[8]');
+		$this->form_validation->set_rules('password', 'Password', 'min_length[3]|required');
 		$this->form_validation->set_rules('cPassword', 'Confirm Password', 'matches[password]');
 		if($this->form_validation->run() == FALSE) {
 			$this->session->set_flashdata('vals', validation_errors());

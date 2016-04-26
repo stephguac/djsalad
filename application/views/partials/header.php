@@ -23,12 +23,6 @@
                     <li>
                         <a href="#">Contact</a>
                     </li>
-                    <li>
-                        <a class="cd-signin" href="#0">Log In</a>
-                    </li>
-                    <li>
-                        <a class="cd-signup" href="#0">Create Account</a>
-                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
