@@ -92,13 +92,13 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="#">About</a>
+                        <a href="About">About</a>
                     </li>
                     <li>
                         <a href="#">Albums</a>
                     </li>
                     <li>
-                        <a href="#">Contact</a>
+                        <a href="Contact">Contact</a>
                     </li>
                     <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Sign Up</b> <span class="caret"></span></a>
