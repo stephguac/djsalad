@@ -5,4 +5,7 @@ class Products extends CI_Controller {
 	public function index() {
 		$this->load->view('productsDashboardView');
 	}
+	public function showProductDetails() {
+		$this->load->view('productDetailsView');
+	}
 }
