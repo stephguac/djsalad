@@ -26,7 +26,7 @@
     <!-- Page Content -->
     <div class="container">
 
-        
+        we da best
     </div>
     <!-- /.container -->
 
