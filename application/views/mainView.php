@@ -22,97 +22,98 @@
 <?php
     $this->load->view("partials/header.php");
 ?>
-
     <!-- Page Content -->
-    <div class="container">
+        <div class="container">
 
-        <div class="row">
+            <div class="row">
 
-            <div class="col-md-3">
-                <div class="list-group">
-                    <a href="#" class="list-group-item">Category 1</a>
-                    <a href="#" class="list-group-item">Category 2</a>
-                    <a href="#" class="list-group-item">Category 3</a>
-                    <a href="#" class="list-group-item">Category 4</a>
-                    <a href="#" class="list-group-item">Category 5</a>
-                    <a href="#" class="list-group-item">Category 6</a>
+                <div class="col-md-3">
+                    <div class="list-group">
+                        <a href="#" class="list-group-item">Category 1</a>
+                        <a href="#" class="list-group-item">Category 2</a>
+                        <a href="#" class="list-group-item">Category 3</a>
+                        <a href="#" class="list-group-item">Category 4</a>
+                        <a href="#" class="list-group-item">Category 5</a>
+                        <a href="#" class="list-group-item">Category 6</a>
+                    </div>
                 </div>
-            </div>
 
-            <div class="col-md-9">
+                <div class="col-md-9">
 
-                <div class="row">
+                    <div class="row">
 
-                    <div class="col-sm-4 col-lg-4 col-md-4">
-                        <div class="thumbnail">
-                            <img src="http://placehold.it/320x320" alt="">
-                            <div class="caption">
-                                <h4 class="pull-right">$19.99</h4>
-                                <h4><a href="#">An Album</a>
-                                </h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <div class="col-sm-4 col-lg-4 col-md-4">
+                            <div class="thumbnail">
+                                <img src="http://placehold.it/320x320" alt="">
+                                <div class="caption">
+                                    <h4 class="pull-right">$19.99</h4>
+                                    <h4><a href="#">An Album</a>
+                                    </h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="col-sm-4 col-lg-4 col-md-4">
-                        <div class="thumbnail">
-                            <img src="http://placehold.it/320x320" alt="">
-                            <div class="caption">
-                                <h4 class="pull-right">$19.99</h4>
-                                <h4><a href="#">Another Album</a>
-                                </h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <div class="col-sm-4 col-lg-4 col-md-4">
+                            <div class="thumbnail">
+                                <img src="http://placehold.it/320x320" alt="">
+                                <div class="caption">
+                                    <h4 class="pull-right">$19.99</h4>
+                                    <h4><a href="#">Another Album</a>
+                                    </h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="col-sm-4 col-lg-4 col-md-4">
-                        <div class="thumbnail">
-                            <img src="http://placehold.it/320x320" alt="">
-                            <div class="caption">
-                                <h4 class="pull-right">$19.99</h4>
-                                <h4><a href="#">Some Album</a>
-                                </h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <div class="col-sm-4 col-lg-4 col-md-4">
+                            <div class="thumbnail">
+                                <img src="http://placehold.it/320x320" alt="">
+                                <div class="caption">
+                                    <h4 class="pull-right">$19.99</h4>
+                                    <h4><a href="#">Some Album</a>
+                                    </h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="col-sm-4 col-lg-4 col-md-4">
-                        <div class="thumbnail">
-                            <img src="http://placehold.it/320x320" alt="">
-                            <div class="caption">
-                                <h4 class="pull-right">$19.99</h4>
-                                <h4><a href="#">More Album</a>
-                                </h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <div class="col-sm-4 col-lg-4 col-md-4">
+                            <div class="thumbnail">
+                                <img src="http://placehold.it/320x320" alt="">
+                                <div class="caption">
+                                    <h4 class="pull-right">$19.99</h4>
+                                    <h4><a href="#">More Album</a>
+                                    </h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="col-sm-4 col-lg-4 col-md-4">
-                        <div class="thumbnail">
-                            <img src="http://placehold.it/320x320" alt="">
-                            <div class="caption">
-                                <h4 class="pull-right">$19.99</h4>
-                                <h4><a href="#">More Album</a>
-                                </h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <div class="col-sm-4 col-lg-4 col-md-4">
+                            <div class="thumbnail">
+                                <img src="http://placehold.it/320x320" alt="">
+                                <div class="caption">
+                                    <h4 class="pull-right">$19.99</h4>
+                                    <h4><a href="#">More Album</a>
+                                    </h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="col-sm-4 col-lg-4 col-md-4">
-                        <div class="thumbnail">
-                            <img src="http://placehold.it/320x320" alt="">
-                            <div class="caption">
-                                <h4 class="pull-right">$19.99</h4>
-                                <h4><a href="#">More Album</a>
-                                </h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <div class="col-sm-4 col-lg-4 col-md-4">
+                            <div class="thumbnail">
+                                <img src="http://placehold.it/320x320" alt="">
+                                <div class="caption">
+                                    <h4 class="pull-right">$19.99</h4>
+                                    <h4><a href="#">More Album</a>
+                                    </h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </div>
                             </div>
                         </div>
+
                     </div>
 
                 </div>
@@ -120,13 +121,11 @@
             </div>
 
         </div>
+        <!-- /.container -->
 
-    </div>
-    <!-- /.container -->
+        <div class="container">
 
-    <div class="container">
-
-        <hr>
+            <hr>
 
 <?php
     $this->load->view("partials/footer.php");
