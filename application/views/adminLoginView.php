@@ -23,12 +23,12 @@
 </head>
 <body>
     <div id=container>
-
+    <form action="/admins/adminLogin" method="POST">
         <h3>Admin Login Page</h3>
         <input type="text" name="E-Mail" placeholder="E-Mail"><br>
         <input type="password" name="password" placeholder="Password"><br>
         <input type="submit" value="Submit"><br>
     </div>
-
+    </form>
 </body>
 </html>
