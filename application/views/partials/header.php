@@ -24,10 +24,10 @@
                         <a href="#">Contact</a>
                     </li>
                     <li>
-                        <a class="cd-signin" href="#0">Sign in</a>
+                        <a class="cd-signin" href="/Users">Sign in</a>
                     </li>
                     <li>
-                        <a class="cd-signup" href="#0">Sign up</a>
+                        <a class="cd-signup" href="/Users">Sign up</a>
                     </li>
                 </ul>
             </div>

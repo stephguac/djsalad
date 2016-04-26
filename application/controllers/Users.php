@@ -6,7 +6,7 @@ class Users extends CI_Controller {
 	public function index() {
 		$this->load->view('loginRegView');
 	}
-
+	
 	public function register() {
 		$this->load->library("form_validation");
 		$this->form_validation->set_rules('firstName', 'First Name', 'trim|required');
