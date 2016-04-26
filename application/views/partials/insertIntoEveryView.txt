@@ -1,0 +1,4 @@
+put in html head:
+<?php
+	$this->load->view("partials/header.php");
+?>
