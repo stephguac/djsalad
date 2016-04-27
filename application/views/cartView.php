@@ -3,7 +3,8 @@
 <head>
 	<title>(Carts Page) Shopping Cart | Dojo eCommerce</title>
 <?php
-	$this->load->view("partials/header.php");
+    $this->load->view("partials/head.php");
+    $this->load->view("partials/header.php");
 ?>
 	<style type="text/css">
 	</style>
