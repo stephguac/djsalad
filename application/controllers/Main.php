@@ -4,7 +4,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Main extends CI_Controller {
 
 	public function index() {
-		$this->load->view('mainView');
+		$this->load->model('Inventory');
+		$results = $this->Inventory->createMainTables();
+		$data['results'] = $results;
+		$this->load->view('mainView', $data);
 	}
 
 	public function showProduct()
@@ -55,6 +58,7 @@ class Main extends CI_Controller {
 
 	public function productPage() {
 		//individual page for each product
+		$this->load->view('productDetailsView');
 	}
 
 	public function productAddToCart() {

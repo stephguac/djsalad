@@ -18,7 +18,7 @@
                         <a href="About">About</a>
                     </li>
                     <li>
-                        <a href="#">Albums</a>
+                        <a href="Search">Albums</a>
                     </li>
                     <li>
                         <a href="Contact">Contact</a>
