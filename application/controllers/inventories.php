@@ -11,7 +11,7 @@ class Inventories extends CI_Controller {
     }
 
 	public function index() {
-		$this->load->view('');
+		$this->load->view('inventoryDashboardView');
 	}
 	
 	public function searchInventory() {
@@ -30,7 +30,10 @@ class Inventories extends CI_Controller {
 	}
 
 	public function addInventory() {
-		// add a new product to inventory. bring up modal.
+		// add a new product to inventory from modal.
+
+		$this->Inventory->addInventory($this->input->post());
+		$this->load->view('inventoryDashboardView');
 	}
 
 	public function editInventory() {
