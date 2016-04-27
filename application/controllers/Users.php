@@ -18,7 +18,7 @@ class Users extends CI_Controller {
 			$this->session->set_flashdata('vals', validation_errors());
 			redirect('/');
 		}
-		else{
+		else {
 			$this->load->model('User');
 			$this->User->register($this->input->post());
 		}	
