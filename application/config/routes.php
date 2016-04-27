@@ -59,6 +59,7 @@ $route['About'] = 'main/aboutView';
 $route['Register'] = 'main/registerView';
 $route['Product'] = 'main/productDetailView';
 $route['Admin'] = 'main/adminView';
+$route['Search'] = 'main/searchView';
 
 $route['shipping'] = 'CHANGE LATER';
 $route['billing'] = 'CHANGE LATER';

@@ -20,7 +20,7 @@ class Inventory extends CI_Model {
 	}
 
 	public function createMainTables() {
-		$sql = "SELECT * FROM products ORDER BY quantity_sold DESC LIMIT 3";
+		$sql = "SELECT * FROM products ORDER BY quantity_sold DESC LIMIT 24";
 		return $this->db->query($sql)->result_array();
 	}
 

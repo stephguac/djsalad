@@ -31,11 +31,11 @@
                     </form>    
                     <br><h4>Genres</h4><br>
                     <div>
-                       <a href="#" class="list-group-item">Category 1</a>
-                       <a href="#" class="list-group-item">Category 2</a>
-                       <a href="#" class="list-group-item">Category 3</a>
-                       <a href="#" class="list-group-item">Category 4</a>
-                       <a href="#" class="list-group-item">Category 5</a>
+                       <a href="#" class="list-group-item">Pop/Top-40</a>
+                       <a href="#" class="list-group-item">Alternative</a>
+                       <a href="#" class="list-group-item">Rap/Hip-Hop/RnB</a>
+                       <a href="#" class="list-group-item">Oldies</a>
+                       <a href="#" class="list-group-item">Rock</a>
                     </div>
                 </div>
                 <div class="col-md-9">
