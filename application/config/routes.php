@@ -54,5 +54,8 @@ $route['default_controller'] = 'main';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 //custom routes
+$route['Contact'] = 'main/contactView';
+$route['About'] = 'main/aboutView';
+
 $route['shipping'] = 'CHANGE LATER';
 $route['billing'] = 'CHANGE LATER';

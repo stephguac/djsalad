@@ -13,4 +13,11 @@ class Main extends CI_Controller {
 		$this->load->view('productDetailsView');
 	}
 
+	public function contactView() {
+		$this->load->view('contactView');
+	}
+
+	public function aboutView() {
+		$this->load->view('aboutView');
+	}
 }
