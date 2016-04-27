@@ -44,6 +44,7 @@ class Main extends CI_Controller {
 
 	public function productPage() {
 		//individual page for each product
+		$this->load->view('productDetailsView');
 	}
 
 	public function productAddToCart() {
