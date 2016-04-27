@@ -2,6 +2,8 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Inventories extends CI_Controller {
+
+	// INVENTORIES A.K.A. PRODUCTS
 	
 	public function __construct() {
         parent::__construct();
