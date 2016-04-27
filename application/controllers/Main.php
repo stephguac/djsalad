@@ -35,6 +35,14 @@ class Main extends CI_Controller {
 	}
 
 	public function productSearchByName() {
+		$this->load->model('Inventory');
+		$productName = $this->input->post('search');
+		$this->inventory->searchInventory($this->input->post());
+		
+		$nameSearchData = array('');
+		$nameSearchData['product'] = $productName;
+		
+		$this->load->view('mainView');
 		// for search bar
 	}
 

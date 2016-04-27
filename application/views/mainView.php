@@ -14,7 +14,6 @@
 <?php
     $this->load->view("partials/head.php");
 ?>
-
 </head>
 
 <body>
@@ -25,16 +24,17 @@
     <!-- Page Content -->
         <div class="container">
             <div class="row">
-
                 <div class="col-md-3">
-                    <div class="list-group">
-                        <a href="#" class="list-group-item">Category 1</a>
-                        <a href="#" class="list-group-item">Category 2</a>
-                        <a href="#" class="list-group-item">Category 3</a>
-                        <a href="#" class="list-group-item">Category 4</a>
-                        <a href="#" class="list-group-item">Category 5</a>
-                        <a href="#" class="list-group-item">Category 6</a>
-                    </div>
+                    <form method="POST" action="Main/productSearchByName">
+                        <input id="search-input" type='text' name="search" value='' placeholder="product name">
+                        <button type="submit" value="Search">&#128269;</button>
+                    </form>    
+                    <h4>Genres</h4>
+                    <ul class="col-3-search">
+                        <li><a href="#">Rap</a></li>    <!-- also need to add the # of albums in each genere -->
+                        <li><a href="#">Country</a></li>
+                        <li><a href="#">Electronic</a></li>
+                    </ul>
                 </div>
 
                 <div class="col-md-9">

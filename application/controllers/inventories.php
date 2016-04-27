@@ -11,15 +11,17 @@ class Inventories extends CI_Controller {
 	public function index() {
 		$this->load->view('');
 	}
-	
+			// need to add a view page for the index function 
+
+
 	public function searchInventory() {
-		$product = $this->products->find($product_name);
-		$description = $this->products-find($product_description);
+		$artistName = $this->inventory->find($artistName);
+		$ablumName = $this->inventory->find($albumName);
 		$viewData = array(
-			'Product' => $product,
-			'Description' => $description
+			'artistName' => $artistName,
+			'albumName' => $albumName,
 			);
-		$this->load->view('productDetailView', $viewData);
+		$this->load->view('mainView', $viewData);
 		// search inventory for products
 	}
 
@@ -28,6 +30,7 @@ class Inventories extends CI_Controller {
 	}
 
 	public function addInventory() {
+		$product = $this->session->post()
 		// add a new product to inventory. bring up modal.
 	}
 
