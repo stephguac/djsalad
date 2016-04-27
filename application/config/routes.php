@@ -56,6 +56,9 @@ $route['translate_uri_dashes'] = FALSE;
 //custom routes
 $route['Contact'] = 'main/contactView';
 $route['About'] = 'main/aboutView';
+$route['Register'] = 'main/registerView';
+$route['Product'] = 'main/productDetailView';
+$route['Admin'] = 'main/adminView';
 
 $route['shipping'] = 'CHANGE LATER';
 $route['billing'] = 'CHANGE LATER';

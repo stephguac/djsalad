@@ -20,6 +20,14 @@ class Main extends CI_Controller {
 		$this->load->view('aboutView');
 	}
 
+	public function registerView() {
+		$this->load->view('registerView');
+	}
+
+	public function adminView() {
+		$this->load->view('adminLoginView');
+	}
+
 
 
 	public function productSortBy() {
