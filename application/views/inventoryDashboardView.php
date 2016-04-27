@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>garbage</title>
+    <title>Product</title>
 <?php
     $this->load->view("partials/header.php");
 ?>
