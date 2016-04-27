@@ -26,7 +26,7 @@
     <!-- Page Content -->
     <div class="container">
 
-        
+        contact us bitchez: swaglord@ayy.lmao
     </div>
     <!-- /.container -->
 

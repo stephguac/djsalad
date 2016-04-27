@@ -24,7 +24,6 @@
 ?>
     <!-- Page Content -->
         <div class="container">
-
             <div class="row">
 
                 <div class="col-md-3">
@@ -44,10 +43,10 @@
 
                         <div class="col-sm-4 col-lg-4 col-md-4">
                             <div class="thumbnail">
-                                <img src="http://placehold.it/320x320" alt="">
+                                <img src="http://placekitten.com/320/320" alt="">
                                 <div class="caption">
                                     <h4 class="pull-right">$19.99</h4>
-                                    <h4><a href="#">An Album</a>
+                                    <h4><a href="/Main/showProduct/">An Album</a>
                                     </h4>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                                 </div>
@@ -56,7 +55,7 @@
 
                         <div class="col-sm-4 col-lg-4 col-md-4">
                             <div class="thumbnail">
-                                <img src="http://placehold.it/320x320" alt="">
+                                <img src="http://placekitten.com/320/320" alt="">
                                 <div class="caption">
                                     <h4 class="pull-right">$19.99</h4>
                                     <h4><a href="#">Another Album</a>
@@ -68,7 +67,7 @@
 
                         <div class="col-sm-4 col-lg-4 col-md-4">
                             <div class="thumbnail">
-                                <img src="http://placehold.it/320x320" alt="">
+                                <img src="http://placekitten.com/320/320" alt="">
                                 <div class="caption">
                                     <h4 class="pull-right">$19.99</h4>
                                     <h4><a href="#">Some Album</a>
@@ -80,7 +79,7 @@
 
                         <div class="col-sm-4 col-lg-4 col-md-4">
                             <div class="thumbnail">
-                                <img src="http://placehold.it/320x320" alt="">
+                                <img src="http://placekitten.com/320/320" alt="">
                                 <div class="caption">
                                     <h4 class="pull-right">$19.99</h4>
                                     <h4><a href="#">More Album</a>
@@ -92,7 +91,7 @@
 
                         <div class="col-sm-4 col-lg-4 col-md-4">
                             <div class="thumbnail">
-                                <img src="http://placehold.it/320x320" alt="">
+                                <img src="http://placekitten.com/320/320" alt="">
                                 <div class="caption">
                                     <h4 class="pull-right">$19.99</h4>
                                     <h4><a href="#">More Album</a>
@@ -104,7 +103,7 @@
 
                         <div class="col-sm-4 col-lg-4 col-md-4">
                             <div class="thumbnail">
-                                <img src="http://placehold.it/320x320" alt="">
+                                <img src="http://placekitten.com/320/320" alt="">
                                 <div class="caption">
                                     <h4 class="pull-right">$19.99</h4>
                                     <h4><a href="#">More Album</a>
