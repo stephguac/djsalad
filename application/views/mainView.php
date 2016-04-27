@@ -26,7 +26,7 @@
             <div class="row">
                 <div class="col-md-3">
                     <form method="POST" action="Main/productSearchByName">
-                        <input id="search-input" type='text' name="search" value='' placeholder="product name">
+                        <input id="search-input" type='text' name="search" placeholder="Product Name">
                         <button type="submit" value="Search">&#128269;</button>
                     </form>    
                     <h4>Genres</h4>
