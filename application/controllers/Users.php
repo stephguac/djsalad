@@ -3,6 +3,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Users extends CI_Controller {
 
+	public function __construct() {
+        parent::__construct();
+        $this->load->model('User');
+    }
+
 	public function index() {
 		$this->load->view('loginRegView');
 	}
@@ -19,17 +24,17 @@ class Users extends CI_Controller {
 			redirect('/Main/registerView');
 		}
 		else {
-			$this->load->model('User');
 			$this->User->register($this->input->post());
+			$currentUser = $this->User->login($this->input->post());
+			$this->session->set_userdata('currentUser', $currentUser);
 		}	
-		$this->load->view('/');
+		$this->load->view('mainView');
 	}
 
 	public function login() {
-		$this->load->model('User');
 		$currentUser = $this->User->login($this->input->post());
 		$this->session->set_userdata('currentUser', $currentUser);
-		$this->load->view('mainView.php');
+		$this->load->view('mainView');
 	}
 
 	public function logout() {
@@ -38,7 +43,6 @@ class Users extends CI_Controller {
 	}
 
 	public function displayProfile($uID) {
-		$this->load->model('User');
 		$this->User->displayProfile($uID);
 		$this->load->view('userProfileView', $userInfo);
 	}
