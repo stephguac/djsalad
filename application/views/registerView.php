@@ -25,21 +25,21 @@
 
     <!-- Page Content -->
     <div class="container">
-        <div>
-                <h3>Register</h3>
-                <form action="/Users/register" method="post">
-                    First Name: <input type="text" name="firstName"><br>
-                    Last Name: <input type="text" name="lastName"><br>
-                    Email: <input type="text" name="email"><br>
-                    Password: <input type="password" name="password"><br>
-                    * Password should be at least 8 characters<br>
-                    Confirm Password <input type="password" name="cPassword"><br>
-                    <input type="submit" value="Register">
-                </form>
+                <h1>Register</h1><br>
+                <form action="/Users/register" method="post" class="form-inline" role="form">
+                    <fieldset class="form-group row">
+                        <label class="col-sm-6 form-control-label">First Name:</label> <div class="col-sm-6"><input type="text" class="form-control" name="firstName" placeholder="Jane"></div> <br>
+                        <label class="col-sm-6 form-control-label">Last Name:</label> <div class="col-sm-6"><input type="text" class="form-control" name="lastName" placeholder="Doe"></div> <br>
+                        <label class="col-sm-6 form-control-label">Email:</label> <div class="col-sm-6"><input type="text" class="form-control" name="email" placeholder="Jane@Doe.com"></div> <br>
+                        <label for="password" class="col-sm-6 form-control-label">Password:</label> <div class="col-sm-6"><input type="password" class="form-control" name="password" placeholder="at least 8 characters"></div> <br>
+                        <label class="col-sm-6 form-control-label">Confirm Password:</label> <div class="col-sm-6"><input type="password" class="form-control" name="cPassword"></div> <br>
+                        <!-- <span class="label label-info">Password should be at least 8 characters.</span><br> -->
+                        <input id="reg-btn" type="submit" value="Register" class="btn btn-primary">
+                    </fieldset>
+                </form><br>
 <?= 
-                $this->session->flashdata('vals'); 
+                $this->session->flashdata('vals');
 ?>
-        </div>
     </div>
     <!-- /.container -->
 
@@ -52,3 +52,11 @@
     $this->load->view("partials/footer.php");
 ?>
 
+<style type="text/css">
+    input {
+        margin-bottom: 5px;
+    }
+    #reg-btn {
+        margin-left: 75%;
+    }
+</style>
