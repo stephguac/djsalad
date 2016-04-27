@@ -14,7 +14,6 @@
 <?php
     $this->load->view("partials/head.php");
 ?>
-
 </head>
 
 <body>
@@ -25,18 +24,20 @@
     <!-- Page Content -->
         <div class="container">
             <div class="row">
-
                 <div class="col-md-3">
-                    <div class="list-group">
-                        <a href="#" class="list-group-item">Category 1</a>
-                        <a href="#" class="list-group-item">Category 2</a>
-                        <a href="#" class="list-group-item">Category 3</a>
-                        <a href="#" class="list-group-item">Category 4</a>
-                        <a href="#" class="list-group-item">Category 5</a>
-                        <a href="#" class="list-group-item">Category 6</a>
+                    <form method="POST" action="Main/productSearchByName">
+                        <input id="search-input" type='text' name="search" placeholder="Product Name">
+                        <button type="submit" value="Search">&#128269;</button>
+                    </form>    
+                    <h4>Genres</h4>
+                    <div>
+                       <a href="#" class="list-group-item">Category 1</a>
+                       <a href="#" class="list-group-item">Category 2</a>
+                       <a href="#" class="list-group-item">Category 3</a>
+                       <a href="#" class="list-group-item">Category 4</a>
+                       <a href="#" class="list-group-item">Category 5</a>
                     </div>
                 </div>
-
                 <div class="col-md-9">
 
                     <div class="row">

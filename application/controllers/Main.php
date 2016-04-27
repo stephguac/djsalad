@@ -9,7 +9,7 @@ class Main extends CI_Controller {
 
 	public function showProduct()
 	{
-		$this->load->view('productDetailsView');
+		$this->load->view('inventoryDetailsView');
 	}
 
 	public function contactView() {
@@ -28,6 +28,9 @@ class Main extends CI_Controller {
 		$this->load->view('adminLoginView');
 	}
 
+	public function searchView() {
+		$this->load->view('searchView');
+	}
 
 
 	public function productSortBy() {
@@ -39,6 +42,14 @@ class Main extends CI_Controller {
 	}
 
 	public function productSearchByName() {
+		$this->load->model('Inventory');
+		$productName = $this->input->post('search');
+		$this->inventory->searchInventory($this->input->post());
+		
+		$nameSearchData = array('');
+		$nameSearchData['product'] = $productName;
+		
+		$this->load->view('mainView');
 		// for search bar
 	}
 

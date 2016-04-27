@@ -2,14 +2,18 @@
 <html>
 <head>
     <title>Product</title>
+
 <?php
-    // $this->load->view("partials/head.php");
+     $this->load->view("partials/head.php");
 ?>
+
 </head>
 <body>
+
 <?php
-    // $this->load->view("partials/header.php");
+     $this->load->view("partials/header.php");
 ?>
+
     <div>
         <form>
             <input type="search" name="search" value="Search"></input>
@@ -65,7 +69,7 @@
             <!-- Modal Body -->
             <div class="modal-body">
                 
-                <form role="form" action="/inventories/addInventory" method="POST">
+                <form role="form" action="/inventories/addInventory" method="post">
                     <div class="form-group">
                         <label for="title">Title</label>
                         <input type="text" name="title" class="form-control" id="name" placeholder="Enter name"/>
@@ -117,6 +121,10 @@
         </div>
     </div>
 </div>
+
+<?php
+     $this->load->view("partials/footer.php");
+?>
     
 </body>
 </html>
