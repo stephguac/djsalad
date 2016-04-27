@@ -57,7 +57,8 @@ $route['translate_uri_dashes'] = FALSE;
 $route['Contact'] = 'main/contactView';
 $route['About'] = 'main/aboutView';
 $route['Register'] = 'main/registerView';
-$route['Product_Search'] = 'inventories/searchInventory';  // i think this is wrong
+$route['Product'] = 'main/productDetailView';
+$route['Admin'] = 'main/adminView';
 
 $route['shipping'] = 'CHANGE LATER';
 $route['billing'] = 'CHANGE LATER';

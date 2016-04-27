@@ -2,14 +2,16 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Inventories extends CI_Controller {
+
+	// INVENTORIES A.K.A. PRODUCTS
 	
 	public function __construct() {
         parent::__construct();
-        $this->load->model('MODELNAME');
+        $this->load->model('Inventory');
     }
 
 	public function index() {
-		$this->load->view('');
+		$this->load->view('inventoryDashboardView');
 	}
 			// need to add a view page for the index function 
 
@@ -30,8 +32,9 @@ class Inventories extends CI_Controller {
 	}
 
 	public function addInventory() {
-		$product = $this->session->post()
-		// add a new product to inventory. bring up modal.
+		// add a new product to inventory from modal.
+		$this->Inventory->addInventory($this->input->post());
+		$this->load->view('inventoryDashboardView');
 	}
 
 	public function editInventory() {

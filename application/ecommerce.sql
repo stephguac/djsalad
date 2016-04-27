@@ -1,3 +1,5 @@
+CREATE DATABASE  IF NOT EXISTS `ecommerce` /*!40100 DEFAULT CHARACTER SET utf8 */;
+USE `ecommerce`;
 -- MySQL dump 10.13  Distrib 5.7.9, for osx10.9 (x86_64)
 --
 -- Host: 127.0.0.1    Database: ecommerce
@@ -214,7 +216,9 @@ DROP TABLE IF EXISTS `products`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `products` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(100) DEFAULT NULL,
+  `title` varchar(100) DEFAULT NULL,
+  `artist` varchar(45) DEFAULT NULL,
+  `genre` varchar(45) DEFAULT NULL,
   `quantity_sold` int(11) DEFAULT NULL,
   `description` varchar(45) DEFAULT NULL,
   `price` varchar(45) DEFAULT NULL,
@@ -273,4 +277,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-04-26 18:25:49
+-- Dump completed on 2016-04-27 11:06:20
