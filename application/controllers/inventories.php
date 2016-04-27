@@ -5,7 +5,7 @@ class Inventories extends CI_Controller {
 	
 	public function __construct() {
         parent::__construct();
-        $this->load->model('MODELNAME');
+        $this->load->model('Inventory');
     }
 
 	public function index() {
