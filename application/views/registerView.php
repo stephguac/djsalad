@@ -35,7 +35,7 @@
                     * Password should be at least 8 characters<br>
                     Confirm Password <input type="password" name="cPassword"><br>
                     <input type="submit" value="Register">
-                </form>
+                </form><br>
 <?= 
                 $this->session->flashdata('vals'); 
 ?>
