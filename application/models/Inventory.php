@@ -24,5 +24,5 @@ class Inventory extends CI_Model {
 		return $this->db->query($sql)->result_array();
 	}
 
-	public function 
+
 }
