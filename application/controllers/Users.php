@@ -16,13 +16,13 @@ class Users extends CI_Controller {
 		$this->form_validation->set_rules('cPassword', 'Confirm Password', 'matches[password]');
 		if($this->form_validation->run() == FALSE) {
 			$this->session->set_flashdata('vals', validation_errors());
-			redirect('/');
+			redirect('/Main/registerView');
 		}
 		else {
 			$this->load->model('User');
 			$this->User->register($this->input->post());
 		}	
-		$this->load->view('loginRegView');
+		$this->load->view('/');
 	}
 
 	public function login() {
