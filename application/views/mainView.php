@@ -49,7 +49,7 @@
                             echo "<img src='http://placekitten.com/320/320' alt=''>"; // $val['IMAGEURLHERE']
                             echo "<div class='caption'>";
                             echo "<h4 class='pull-right'>$" . $val['price'] ."</h4>";
-                            echo "<h4><a href='/Main/showProduct/'>" . $val['title'] . " by " . $val['artist'] ."</a><h4>";
+                            echo "<h4><a href='/Main/showProduct/" . $val['id'] ."'>" . $val['title'] . " by " . $val['artist'] ."</a><h4>";
                             echo "<p>" . $val['description'] ."</p>";
                             echo "</div></div></div>";
                         }
@@ -59,10 +59,10 @@
                             <div class="thumbnail">
                                 <img src="http://placekitten.com/320/320" alt="">
                                 <div class="caption">
-                                    <h4 class="pull-right">$19.99</h4>
-                                    <h4><a href="/Main/showProduct/">An Album</a>
+                                    <h4 class="pull-right">$swag</h4>
+                                    <h4><a href="/Main/showProduct/">Take Care</a>
                                     </h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                    <p>YOLO that's the motto.</p>
                                 </div>
                             </div>
                         </div>
@@ -71,10 +71,10 @@
                             <div class="thumbnail">
                                 <img src="http://placekitten.com/320/320" alt="">
                                 <div class="caption">
-                                    <h4 class="pull-right">$19.99</h4>
-                                    <h4><a href="#">Another Album</a>
+                                    <h4 class="pull-right">$dank</h4>
+                                    <h4><a href="#">Another One</a>
                                     </h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                    <p>They don't want you to buy records.</p>
                                 </div>
                             </div>
                         </div>
@@ -83,46 +83,10 @@
                             <div class="thumbnail">
                                 <img src="http://placekitten.com/320/320" alt="">
                                 <div class="caption">
-                                    <h4 class="pull-right">$19.99</h4>
-                                    <h4><a href="#">Some Album</a>
+                                    <h4 class="pull-right">$69.69</h4>
+                                    <h4><a href="#">Salad Tossing</a>
                                     </h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-4 col-lg-4 col-md-4">
-                            <div class="thumbnail">
-                                <img src="http://placekitten.com/320/320" alt="">
-                                <div class="caption">
-                                    <h4 class="pull-right">$19.99</h4>
-                                    <h4><a href="#">More Album</a>
-                                    </h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-4 col-lg-4 col-md-4">
-                            <div class="thumbnail">
-                                <img src="http://placekitten.com/320/320" alt="">
-                                <div class="caption">
-                                    <h4 class="pull-right">$19.99</h4>
-                                    <h4><a href="#">More Album</a>
-                                    </h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-4 col-lg-4 col-md-4">
-                            <div class="thumbnail">
-                                <img src="http://placekitten.com/320/320" alt="">
-                                <div class="caption">
-                                    <h4 class="pull-right">$19.99</h4>
-                                    <h4><a href="#">More Album</a>
-                                    </h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                    <p>Julian's staff pick.</p>
                                 </div>
                             </div>
                         </div>

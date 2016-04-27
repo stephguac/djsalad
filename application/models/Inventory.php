@@ -24,5 +24,7 @@ class Inventory extends CI_Model {
 		return $this->db->query($sql)->result_array();
 	}
 
-
+	public function showProduct($id) {
+		$this->load->view('productDetailsView');
+	} 
 }
