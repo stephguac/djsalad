@@ -2,7 +2,15 @@
         <footer>
             <div class="row">
                 <div class="col-lg-12">
-                    <p>Copyright &copy; DJ Salad 2016</p>
+                    <p>Copyright &copy; DJ Salad 2016<span class="pull-right"><a href="/Admins/adminLogin/">Admin Login</a> | <a href="/Users/logout/">Log Out</a> |
+<?php
+                    if ($this->session->userdata("currentUser")) {
+                        echo $this->session->userdata("currentUser")['email'];
+                    } else {
+                        echo "Guest";
+                    }
+?>
+</span></p>
                 </div>
             </div>
         </footer>
