@@ -32,9 +32,14 @@ class Users extends CI_Controller {
 	}
 
 	public function login() {
-		$currentUser = $this->User->login($this->input->post());
-		$this->session->set_userdata('currentUser', $currentUser);
+		$user = $this->User->login($this->input->post());
+        if ($user) {
+        	$this->session->set_userdata('currentUser', $user);
+        } else {
+        	$this->session->set_flashdata('error', 'Invalid username or password.');
+        }
 		$this->load->view('mainView');
+		// var_dump($this->input->post());
 	}
 
 	public function logout() {
