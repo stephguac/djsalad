@@ -3,6 +3,7 @@
 	<title>(Dashboard Orders)</title>
 <?php
 	$this->load->view("partials/header.php");
+    $this->load->view("partials/head.php");
 ?>
 	<style type="text/css">
 	</style>
