@@ -6,12 +6,14 @@ class Inventory extends CI_Model {
 	// INVENTORIES A.K.A. PRODUCTS
 
 	public function addInventory($formData) {
-		$sql = "INSERT INTO products (title, artist, description, genre, price, image_1, image_2, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, NOW(), NOW())";
+		$sql = "INSERT INTO products (title, artist, description, genre, price, quantity_remaining, quantity_sold, image_1, image_2, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, NOW(), NOW())";
 		$params = [
 			$formData['title'],
 			$formData['artist'],
 			$formData['description'],
 			$formData['genre'],
+			$formData['remaining'],
+			$formData['sold'],
 			$formData['price'],
 			$formData['image1'],
 			$formData['image2']
@@ -19,7 +21,7 @@ class Inventory extends CI_Model {
 		$this->db->query($sql, $params);
 	}
 
-	public function displayInventory() {
+	public function displayProducts() {
 		$sql = "SELECT * FROM products";
 		
 		return $this->db->query($sql)->result_array();
@@ -32,5 +34,10 @@ class Inventory extends CI_Model {
 
 	public function showProduct($id) {
 		$this->load->view('productDetailsView');
-	} 
+	}
+
+	public function deleteProduct($id) {
+		$this->db->where('id', $id);
+		$this->db->delete('products');
+	}
 }

@@ -11,7 +11,7 @@ class Inventories extends CI_Controller {
     }
 
 	public function index() {
-		$this->load->view('inventoryDashboardView');
+		$this->displayInventory();
 	}
 			// need to add a view page for the index function 
 
@@ -29,8 +29,7 @@ class Inventories extends CI_Controller {
 
 	public function displayInventory() {
 		// populate inventory table from db (products table)
-		
-		$results = $this->Inventory->displayInventory();
+		$results = $this->Inventory->displayProducts();
 		$data['results'] = $results;
 		$this->load->view('inventoryDashboardView', $data);
 	}
@@ -38,11 +37,17 @@ class Inventories extends CI_Controller {
 	public function addInventory() {
 		// add a new product to inventory from modal.
 		$this->Inventory->addInventory($this->input->post());
-		$this->load->view('inventoryDashboardView');
+		$this->displayInventory();
 	}
 
 	public function editInventory() {
 		// edit inventory/product details for individual product.
+	}
+
+	public function deleteProducts($id) {
+		// delete inventory/product details for individual product.
+		$this->Inventory->deleteProduct($id);
+		$this->displayInventory();
 	}
 
 }

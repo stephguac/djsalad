@@ -21,32 +21,39 @@
     </div>
     <div>
 
+<!-- <?php var_dump($results) ?> -->
+     <table class="table">
+            <thead>
+                <tr>
+                    <th>Picture</th>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Inventory Count</th>
+                    <th>Quantity Sold</th>
+                    <th>Action</th>             
+                </tr>
+            </thead>
+            <tbody>
 <?php
-    var_dump($results);
+        foreach ($results as $val) {
+            $image = '<img src="' . $val['image_1'] . '"height="100" width="100">';
+            $id = $val['id'];
+            $title = $val['title'];
+            $remaining = $val['quantity_remaining'];
+            $sold = $val['quantity_sold'];
 ?>
-
-        <table class="table">
-            <tr>
-                <td>Picture</td>
-                <td>ID</td>
-                <td>Name</td>
-                <td>Inventory Count</td>
-                <td>Quantity Sold</td>
-                <td>Action</td>             
-            </tr>
-            <!-- for loop in php below to add items -->
-            <tr>
-                <td>Shirt</td>
-                <td>$10.00</td>
-                <td>1</td>
-                <td>$10.00</td>
-                <td>$10.00</td>
-                <td>
-                    <a href="#">edit</a>
-                    <a href="#">delete</a>
-                </td>
-            </tr>
-        </table>
+                <tr>
+                    <td><?php echo $image; ?></td>
+                    <td><?php echo $id; ?></td>
+                    <td><?php echo $title; ?></td>
+                    <td><?php echo $remaining; ?></td>
+                    <td><?php echo $sold; ?></td>
+                    <td><a href="#">Edit</a>
+                    <?= '<a href="/Inventories/deleteProducts/' . $id . '">Delete</a>' ?></td>
+                </tr>
+<?php } ?>
+            </tbody>
+        </table> 
     </div>
 
 <!-- Button trigger modal -->
@@ -103,6 +110,16 @@
                      <div class="form-group">
                         <label for="price">Price</label>
                         <input type="text" name="price" class="form-control" id="price" placeholder="Enter Price"/>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="remaining">Quantity Remaining</label>
+                        <input type="text" name="remaining" class="form-control" id="remaining" placeholder="Enter Quantity Remaining"/>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="sold">Quantity Sold</label>
+                        <input type="text" name="sold" class="form-control" id="sold" placeholder="Enter Quanity Sold"/>
                     </div>
 
                      <div class="form-group">
