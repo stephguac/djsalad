@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Inventory</title>
+    <title>Product</title>
 <?php
     $this->load->view("partials/header.php");
 ?>
