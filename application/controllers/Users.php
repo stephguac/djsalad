@@ -12,7 +12,7 @@ class Users extends CI_Controller {
 		$this->form_validation->set_rules('firstName', 'First Name', 'trim|required');
 		$this->form_validation->set_rules('lastName', 'Last Name', 'trim|required');
 		$this->form_validation->set_rules('email', 'Email', 'trim|required|valid_emails|is_unique[users.email]');
-		$this->form_validation->set_rules('password', 'Password', 'min_length[8]');
+		$this->form_validation->set_rules('password', 'Password', 'min_length[3]'); // change to 8 later.
 		$this->form_validation->set_rules('cPassword', 'Confirm Password', 'matches[password]');
 		if($this->form_validation->run() == FALSE) {
 			$this->session->set_flashdata('vals', validation_errors());
