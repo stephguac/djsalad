@@ -29,7 +29,7 @@
                         <input id="search-input" type='text' name="search" placeholder="Product Name">
                         <button type="submit" value="Search">&#128269;</button>
                     </form>    
-                    <h4>Genres</h4>
+                    <br><h4>Genres</h4><br>
                     <div>
                        <a href="#" class="list-group-item">Category 1</a>
                        <a href="#" class="list-group-item">Category 2</a>
@@ -41,6 +41,19 @@
                 <div class="col-md-9">
 
                     <div class="row">
+<?php
+                        // var_dump($results);
+                        foreach ($results as $val) {
+                            echo "<div class='col-sm-4 col-lg-4 col-md-4'>";
+                            echo "<div class='thumbnail'>";
+                            echo "<img src='http://placekitten.com/320/320' alt=''>"; // $val['IMAGEURLHERE']
+                            echo "<div class='caption'>";
+                            echo "<h4 class='pull-right'>$" . $val['price'] ."</h4>";
+                            echo "<h4><a href='/Main/showProduct/'>" . $val['title'] . " by " . $val['artist'] ."</a><h4>";
+                            echo "<p>" . $val['description'] ."</p>";
+                            echo "</div></div></div>";
+                        }
+?>
 
                         <div class="col-sm-4 col-lg-4 col-md-4">
                             <div class="thumbnail">
@@ -116,7 +129,7 @@
 
                     </div>
 
-                </div>
+                </div> <!-- col-md-9 -->
 
             </div>
 

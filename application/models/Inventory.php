@@ -5,10 +5,6 @@ class Inventory extends CI_Model {
 
 	// INVENTORIES A.K.A. PRODUCTS
 
-	public function index(){
-		$this->load->view('productDetailsView.php');
-	}
-
 	public function addInventory($formData) {
 		$sql = "INSERT INTO products (title, artist, description, genre, price, image_1, image_2, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, NOW(), NOW())";
 		$params = [
@@ -22,4 +18,11 @@ class Inventory extends CI_Model {
 		];
 		$this->db->query($sql, $params);
 	}
+
+	public function createMainTables() {
+		$sql = "SELECT * FROM products ORDER BY quantity_sold DESC LIMIT 3";
+		return $this->db->query($sql)->result_array();
+	}
+
+	public function 
 }
