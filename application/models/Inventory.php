@@ -22,4 +22,10 @@ class Inventory extends CI_Model {
 		];
 		$this->db->query($sql, $params);
 	}
+
+	public function displayInventory() {
+		$sql = "SELECT * FROM products";
+		
+		return $this->db->query($sql)->result_array();
+	}
 }

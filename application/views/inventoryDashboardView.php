@@ -20,6 +20,11 @@
         </form>
     </div>
     <div>
+
+<?php
+    var_dump($results);
+?>
+
         <table class="table">
             <tr>
                 <td>Picture</td>

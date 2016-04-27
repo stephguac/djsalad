@@ -29,6 +29,10 @@ class Inventories extends CI_Controller {
 
 	public function displayInventory() {
 		// populate inventory table from db (products table)
+		
+		$results = $this->Inventory->displayInventory();
+		$data['results'] = $results;
+		$this->load->view('inventoryDashboardView', $data);
 	}
 
 	public function addInventory() {

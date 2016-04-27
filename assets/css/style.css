@@ -127,32 +127,3 @@ h1 {
 	font-size: 30px;
 	margin-bottom: 10px;
 }
-
-/*from here down are the stylings for the main view serach bar.  */
-
-.col-md-3{
-    height: 250px; 
-    width: 200px;
-    /*border: 2px solid black;*/
-    padding: 5px 0px 0px 5px;
-    margin: 0px 20px 0px 0px;
-}
-.col-3-search{
-    padding: 5px 0px 5px 5px;
-    margin: 0px 0px 0px 0px;
-}
-h4{
-    padding: 10px 0px 0px 5px;
-    margin: 0px 0px 0px 0px;
-}
-input{
-    width: 150px;
-}
-button{
-    height: 24px;
-    width: 30px;
-    padding: 0px 4px 0px 0px;
-    margin: 2px 3px 0px 0px;   
-}
-
-/*this is where the main view search bar styling ends*/
