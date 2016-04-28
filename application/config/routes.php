@@ -60,5 +60,5 @@ $route['Register'] = 'main/registerView';
 $route['Product'] = 'main/productDetailView';
 $route['Admin'] = 'main/adminView';
 
-$route['shipping'] = 'CHANGE LATER';
-$route['billing'] = 'CHANGE LATER';
+$route['Orders'] = 'orders/displayOrders';
+$route['Orders/changeOrderStatus/(:num)'] = 'Orders/changeOrderStatus/$1';
