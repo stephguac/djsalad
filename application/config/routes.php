@@ -54,13 +54,13 @@ $route['default_controller'] = 'main';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 //custom routes
-$route['Contact'] = 'main/contactView';
-$route['About'] = 'main/aboutView';
-$route['Register'] = 'main/registerView';
-$route['Product/(:num)'] = 'main/showProduct/$1';
-$route['Admin'] = 'main/adminView';
-$route['Search'] = 'main/searchView';
-$route['Login'] = 'users/login';
+$route['Contact'] = 'Main/contactView';
+$route['About'] = 'Main/aboutView';
+$route['Register'] = 'Main/registerView';
+$route['Product/(:num)'] = 'Main/showProduct/$1';
+$route['Admin'] = 'Main/adminView';
+$route['Search'] = 'Main/searchView';
+$route['Login'] = 'Users/login';
 $route['Carts/(:num)'] = 'Carts/productAddToCart/$1';
 
 $route['shipping'] = 'CHANGE LATER';
