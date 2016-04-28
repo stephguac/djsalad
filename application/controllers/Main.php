@@ -13,6 +13,7 @@ class Main extends CI_Controller {
 	public function showProduct($prod_id) {
 		$data['prod_id'] = $prod_id;
 		$this->load->view('productDetailsView', $data);
+		// main/productPage?
 	}
 
 	public function contactView() {
@@ -57,7 +58,7 @@ class Main extends CI_Controller {
 	}
 
 	public function productPage() {
-		//individual page for each product
+		//individual page for each product, main/showProduct? can we delete this
 		$this->load->view('productDetailsView');
 	}
 

@@ -53,7 +53,7 @@
                             echo "<img src='http://placekitten.com/320/320' alt=''>"; // $val['IMAGEURLHERE']
                             echo "<div class='caption'>";
                             echo "<h4 class='pull-right'>$" . $val['price'] ."</h4>";
-                            echo "<h4><a href='/Main/showProduct/" . $val['id'] ."'>" . $val['title'] . " by " . $val['artist'] ."</a><h4>";
+                            echo "<h4><a href='Product/" . $val['id'] ."'>" . $val['title'] . " by " . $val['artist'] ."</a><h4>";
                             echo "<p>" . $val['description'] ."</p>";
                             echo "</div></div></div>";
                         }
