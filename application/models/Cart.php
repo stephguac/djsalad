@@ -10,19 +10,19 @@ class Cart extends CI_Model {
 		];
 		$this->db->query($sql, $params);
 	}
-	public function productAddToCart($productID) {
-		$sql = "SELECT id FROM carts WHERE user_id = ?";
+	public function productAddToCart2($productID, $userID) {
+		$sql = "SELECT carts.id FROM carts WHERE user_id = ? LIMIT 1"; //?
 		$params = [
-			$this->session->userdata('currentUser')['id']
+			$userID
 		];
-		$cartID = $this->db->query($sql, $params);
+		$cartID = $this->db->query($sql, $params)->row_array(); //this isnt working
 
 		$sql2 = "INSERT INTO cart_product (cart_id, product_id) VALUES (?, ?)";
-		$params = [
-			$cartID,
+		$params2 = [
+			$cartID['id'],
 			$productID
 		];
-		// return $this->db->query($sql2, $params)->result_array();
+		$this->db->query($sql2, $params2);
 	}
 	// public function productAddToCart($prod_id, $userID) {
 	// 	$sql = "SELECT * FROM carts WHERE user_id = $userID";

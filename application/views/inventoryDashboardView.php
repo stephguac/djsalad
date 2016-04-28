@@ -57,7 +57,7 @@
                         <tbody>
 <?php
                             foreach ($results as $val) {
-                                $image = '<img src="' . $val['image_1'] . '"height="100" width="100">';
+                                $image = $val['image_1'];
                                 $id = $val['id'];
                                 $title = $val['title'];
                                 $remaining = $val['quantity_remaining'];
