@@ -32,8 +32,7 @@ class Users extends CI_Controller {
 		}
 		$this->load->model('Cart');
 		$this->Cart->createCart($currentUser['id']);
-		$this->load->view('mainView');
-		}	
+		$this->load->view('mainView');	
 		redirect('/');
 	}
 

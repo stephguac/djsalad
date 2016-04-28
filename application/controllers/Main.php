@@ -70,15 +70,6 @@ class Main extends CI_Controller {
 		$this->load->view('productDetailsView');
 	}
 
-	public function productAddToCart($productID) {
-		// form process, show "added to cart"
-		$userID = $this->session->userdata('currentUser')['id'];
-		$this->load->model('Cart');
-		$this->Cart->productAddToCart($productID);
-		$this->load->view('cartView');
-		$this->Cart->productAddToCart($productID, $userID);
-	}
-
 	public function displaySimilarProducts() {
 		//populates similar items at the bottom - same genre, artist, year?
 	}

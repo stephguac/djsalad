@@ -10,22 +10,46 @@
 	</style>
 </head>
 <body>
+<?php
+	// var_dump($cartData);
+?>
 	<div>
 		<table class="table">
 			<tr>
-				<td>Item</td>
+				<td>Picture</td>
+				<td>Title</td>
+				<td>Artist</td>
+				<td>Genre</td>
 				<td>Price</td>
-				<td>Quantity</td>
-				<td>Total</td>
 			</tr>
-			<!-- for loop in php below to add items -->
+<?php
+			foreach($cartData as $cd) {
+				$url = $cd['image_1'];
+				$title = $cd['title'];
+				$artist = $cd['artist'];
+				$genre = $cd['genre'];
+				$price = $cd['price'];
+?>
 			<tr>
-				<td>Shirt</td>
-				<td>$10.00</td>
-				<td>1</td>
-				<td>$10.00</td>
+				<td><img src="<?= $url ?>"></td>
+				<td><?= $title ?></td>
+				<td><?= $artist ?></td>
+				<td><?= $genre ?></td>
+				<td>$<?= $price ?></td>
 			</tr>
+<?php 
+			}
+?>
 		</table>
+	<h4>Total: 
+<?php
+			$sum = 0;
+			foreach($cartData as $cd) {
+				$sum += $cd['price'];
+			}
+			echo "$".$sum;
+?>
+	</h4>
 	</div>
 	<div>
 		<a href="???URL FOR HOME???"><button>Continue Shopping</button></a>
