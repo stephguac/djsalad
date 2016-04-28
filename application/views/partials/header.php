@@ -18,7 +18,7 @@
                         <a href="About">About</a>
                     </li>
                     <li>
-                        <a href="#">Albums</a>
+                        <a href="Search">Albums</a>
                     </li>
                     <li>
                         <a href="Contact">Contact</a>
@@ -33,10 +33,10 @@
                         <li>
                              <div class="row">
                                     <div class="col-md-12">
-                                         <form class="form" role="form" method="post" action="/Users/login/" accept-charset="UTF-8" id="login-nav">
+                                         <form class="form" role="form" method="post" action="Login" accept-charset="UTF-8" id="login-nav">
                                                 <div class="form-group">
                                                      <label class="sr-only" for="exampleInputEmail2">Email address</label>
-                                                     <input type="email" name="email" class="form-control" id="exampleInputEmail2" placeholder="Email address" required>
+                                                     <input type="email" name="email" class="form-control" id="exampleInputEmail2" placeholder="Email Address" required>
                                                 </div>
                                                 <div class="form-group">
                                                     <label class="sr-only" for="exampleInputPassword2">Password</label>

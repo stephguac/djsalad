@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>DJ Salad Home Page</title>
+    <title>DJ SALAD TOSSING HITZ</title>
 
 <?php
     $this->load->view("partials/head.php");
@@ -25,98 +25,50 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-3">
-                    <form method="POST" action="Main/productSearchByName">
-                        <input id="search-input" type='text' name="search" value='' placeholder="product name">
-                        <button type="submit" value="Search">&#128269;</button>
-                    </form>    
-                    <h4>Genres</h4>
+                    <form>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search for...">
+                                <span class="input-group-btn">
+                                    <input class="btn btn-default" type="button" value="Go!"></input>
+                                </span>
+                        </div>
+                    </form>   
+                    <br><h4>Genres</h4><br>
                     <div>
-                       <a href="#" class="list-group-item">Category 1</a>
-                       <a href="#" class="list-group-item">Category 2</a>
-                       <a href="#" class="list-group-item">Category 3</a>
-                       <a href="#" class="list-group-item">Category 4</a>
-                       <a href="#" class="list-group-item">Category 5</a>
+                       <a href="#" class="list-group-item">Pop/Top-40</a>
+                       <a href="#" class="list-group-item">Alternative</a>
+                       <a href="#" class="list-group-item">Rap/Hip-Hop/RnB</a>
+                       <a href="#" class="list-group-item">Oldies</a>
+                       <a href="#" class="list-group-item">Rock</a>
                     </div>
                 </div>
                 <div class="col-md-9">
 
                     <div class="row">
+<?php
+                        // var_dump($results);
+                        // if ($results) {
+                            foreach ($results as $val) {
 
-                        <div class="col-sm-4 col-lg-4 col-md-4">
-                            <div class="thumbnail">
-                                <img src="http://placekitten.com/320/320" alt="">
-                                <div class="caption">
-                                    <h4 class="pull-right">$19.99</h4>
-                                    <h4><a href="/Main/showProduct/">An Album</a>
-                                    </h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                </div>
-                            </div>
-                        </div>
+                                if(strlen($val['description']) > 95) $val['description'] = substr($val['description'], 0, 95).'...';
 
-                        <div class="col-sm-4 col-lg-4 col-md-4">
-                            <div class="thumbnail">
-                                <img src="http://placekitten.com/320/320" alt="">
-                                <div class="caption">
-                                    <h4 class="pull-right">$19.99</h4>
-                                    <h4><a href="#">Another Album</a>
-                                    </h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                </div>
-                            </div>
-                        </div>
+                                if(strlen($val['title']) > 22) $val['title'] = substr($val['title'], 0, 22).'...';
 
-                        <div class="col-sm-4 col-lg-4 col-md-4">
-                            <div class="thumbnail">
-                                <img src="http://placekitten.com/320/320" alt="">
-                                <div class="caption">
-                                    <h4 class="pull-right">$19.99</h4>
-                                    <h4><a href="#">Some Album</a>
-                                    </h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-4 col-lg-4 col-md-4">
-                            <div class="thumbnail">
-                                <img src="http://placekitten.com/320/320" alt="">
-                                <div class="caption">
-                                    <h4 class="pull-right">$19.99</h4>
-                                    <h4><a href="#">More Album</a>
-                                    </h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-4 col-lg-4 col-md-4">
-                            <div class="thumbnail">
-                                <img src="http://placekitten.com/320/320" alt="">
-                                <div class="caption">
-                                    <h4 class="pull-right">$19.99</h4>
-                                    <h4><a href="#">More Album</a>
-                                    </h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-4 col-lg-4 col-md-4">
-                            <div class="thumbnail">
-                                <img src="http://placekitten.com/320/320" alt="">
-                                <div class="caption">
-                                    <h4 class="pull-right">$19.99</h4>
-                                    <h4><a href="#">More Album</a>
-                                    </h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                </div>
-                            </div>
-                        </div>
+                                echo "<div class='col-sm-4 col-lg-4 col-md-4'>";
+                                echo "<div class='thumbnail'>";
+                                echo '<img src="' . $val['image_1'] . '"height="320" width="320">';
+                                echo "<div class='caption'>";
+                                echo "<h4 class='pull-right'>$" . $val['price'] ."</h4>";
+                                echo "<h4><a href='Product/" . $val['id'] ."'>" . $val['title'] . "<br/> by " . $val['artist'] ."</a></h4>";
+                                echo "<p>" . $val['description'] ."</p>";
+                                echo "</div></div></div>";
+                            }
+                        // }
+?>
 
                     </div>
 
-                </div>
+                </div> <!-- col-md-9 -->
 
             </div>
 

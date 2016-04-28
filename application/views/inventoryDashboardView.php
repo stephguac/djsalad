@@ -1,3 +1,12 @@
+<?php
+
+    defined('BASEPATH') OR exit('No direct script access allowed');
+    
+    // if ($this->session->currentUser !==true) {
+    //     redirect('/');
+    // }
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,40 +23,62 @@
      $this->load->view("partials/header.php");
 ?>
 
-    <div>
-        <form>
-            <input type="search" name="search" value="Search"></input>
-        </form>
-    </div>
-    <div>
-        <table class="table">
-            <tr>
-                <td>Picture</td>
-                <td>ID</td>
-                <td>Name</td>
-                <td>Inventory Count</td>
-                <td>Quantity Sold</td>
-                <td>Action</td>             
-            </tr>
-            <!-- for loop in php below to add items -->
-            <tr>
-                <td>Shirt</td>
-                <td>$10.00</td>
-                <td>1</td>
-                <td>$10.00</td>
-                <td>$10.00</td>
-                <td>
-                    <a href="#">edit</a>
-                    <a href="#">delete</a>
-                </td>
-            </tr>
-        </table>
-    </div>
+    <div class="container">
+        <div class="row">
 
-<!-- Button trigger modal -->
-<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModalNorm">
-    Add Product
-</button>
+                <div class="col-lg-6">
+                    <form>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search for...">
+                            <span class="input-group-btn">
+                                <input class="btn btn-default" type="button" value="Go!"></input>
+                            </span>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Button trigger modal -->
+                <button class="btn btn-primary pull-right" data-toggle="modal" data-target="#myModalNorm">
+                    Add Product
+                </button>
+
+                <div class="col-md-12">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Picture</th>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Inventory Count</th>
+                                <th>Quantity Sold</th>
+                                <th>Action</th>             
+                            </tr>
+                        </thead>
+                        <tbody>
+<?php
+                            foreach ($results as $val) {
+                                $image = $val['image_1'];
+                                $id = $val['id'];
+                                $title = $val['title'];
+                                $remaining = $val['quantity_remaining'];
+                                $sold = $val['quantity_sold'];
+?>
+                            <tr>
+                                <td><?php echo $image; ?></td>
+                                <td><?php echo $id; ?></td>
+                                <td><?php echo $title; ?></td>
+                                <td><?php echo $remaining; ?></td>
+                                <td><?php echo $sold; ?></td>
+                                <td><a href="#">Edit</a>
+                                <?= '<a href="/Inventories/deleteProducts/' . $id . '">Delete</a>' ?></td>
+                            </tr>
+<?php } ?>
+                        </tbody>
+                    </table> 
+                </div>
+            </div>
+        </div>
+    </div>
 
 <!-- Modal -->
 <div class="modal fade" id="myModalNorm" tabindex="-1" role="dialog" 
@@ -69,7 +100,8 @@
             <!-- Modal Body -->
             <div class="modal-body">
                 
-                <form role="form" action="/inventories/addInventory" method="post">
+        <!--    <form role="form" action="/inventories/addInventory" method="post"> -->
+                <?php echo form_open_multipart('upload/do_upload');?>
                     <div class="form-group">
                         <label for="title">Title</label>
                         <input type="text" name="title" class="form-control" id="name" placeholder="Enter name"/>
@@ -100,14 +132,24 @@
                         <input type="text" name="price" class="form-control" id="price" placeholder="Enter Price"/>
                     </div>
 
-                     <div class="form-group">
-                        <label for="image1">Image URL 1</label>
-                        <input type="text" name="image1" class="form-control" id="image1" placeholder="Enter Image URL"/>
+                    <div class="form-group">
+                        <label for="remaining">Quantity Remaining</label>
+                        <input type="text" name="remaining" class="form-control" id="remaining" placeholder="Enter Quantity Remaining"/>
                     </div>
 
-                     <div class="form-group">
-                        <label for="image2">Image URL 2</label>
-                        <input type="text" name="image2" class="form-control" id="image2" placeholder="Enter Image URL"/>
+                    <div class="form-group">
+                        <label for="sold">Quantity Sold</label>
+                        <input type="text" name="sold" class="form-control" id="sold" placeholder="Enter Quanity Sold"/>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="image1">Front Cover</label>
+                        <input type="text" name="image1" id="image1" class="form-control" />
+                    </div>
+ 
+                    <div class="form-group">
+                        <label for="image2">Back Cover</label>
+                        <input type="text" name="image2" id="image2" class="form-control" />
                     </div>
 
                 <div class="modal-footer">
