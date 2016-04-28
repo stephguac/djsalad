@@ -15,17 +15,17 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="About">About</a>
+                        <a href="/About">About</a>
                     </li>
                     <li>
-                        <a href="Search">Albums</a>
+                        <a href="/Search">Albums</a>
                     </li>
                     <li>
                         <a href="Contact">Contact</a>
                     </li>
                     <li class="dropdown">
                     <li>
-                        <a href="Register">Register</a>
+                        <a href="/Register">Register</a>
                     </li>                    
                     <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
