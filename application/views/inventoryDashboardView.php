@@ -16,16 +16,19 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
 
-                <div>
+                <div class="col-lg-6">
                     <form>
-                        <input type="search" name="search" value="Search"></input>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search for...">
+                            <span class="input-group-btn">
+                                <input class="btn btn-default" type="button" value="Go!"></input>
+                            </span>
+                        </div>
                     </form>
                 </div>
-                <div>
 
-            <!-- <?php var_dump($results) ?> -->
+                <div class="col-md-12">
                     <table class="table">
                         <thead>
                             <tr>
