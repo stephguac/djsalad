@@ -61,8 +61,11 @@ class Main extends CI_Controller {
 		$this->load->view('productDetailsView');
 	}
 
-	public function productAddToCart() {
+	public function productAddToCart($productID) {
 		// form process, show "added to cart"
+		$this->load->model('Cart');
+		$this->Cart->productAddToCart($productID);
+
 	}
 
 	public function displaySimilarProducts() {
