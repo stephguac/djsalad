@@ -11,7 +11,7 @@
 </head>
 <body>
 <?php
-	// var_dump($cartData);
+
 ?>
 	<div>
 		<table class="table">
@@ -31,7 +31,7 @@
 				$price = $cd['price'];
 ?>
 			<tr>
-				<td><img src="<?= $url ?>"></td>
+				<td><img src="<?= $url ?>" width='50' height='50'></td>
 				<td><?= $title ?></td>
 				<td><?= $artist ?></td>
 				<td><?= $genre ?></td>
