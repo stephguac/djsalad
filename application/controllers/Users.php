@@ -27,7 +27,9 @@ class Users extends CI_Controller {
 			$this->User->register($this->input->post());
 			$currentUser = $this->User->login($this->input->post());
 			$this->session->set_userdata('currentUser', $currentUser);
-		}	
+		}
+		$this->load->model('Cart');
+		$this->Cart->createCart($currentUser['id']);
 		$this->load->view('mainView');
 	}
 

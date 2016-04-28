@@ -65,6 +65,7 @@ class Main extends CI_Controller {
 		// form process, show "added to cart"
 		$this->load->model('Cart');
 		$this->Cart->productAddToCart($productID);
+		$this->load->view('cartView');
 
 	}
 
