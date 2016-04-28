@@ -47,16 +47,18 @@
                     <div class="row">
 <?php
                         // var_dump($results);
-                        foreach ($results as $val) {
-                            echo "<div class='col-sm-4 col-lg-4 col-md-4'>";
-                            echo "<div class='thumbnail'>";
-                            echo "<img src='http://placekitten.com/320/320' alt=''>"; // $val['IMAGEURLHERE']
-                            echo "<div class='caption'>";
-                            echo "<h4 class='pull-right'>$" . $val['price'] ."</h4>";
-                            echo "<h4><a href='Product/" . $val['id'] ."'>" . $val['title'] . " by " . $val['artist'] ."</a><h4>";
-                            echo "<p>" . $val['description'] ."</p>";
-                            echo "</div></div></div>";
-                        }
+                        // if ($results) {
+                            foreach ($results as $val) {
+                                echo "<div class='col-sm-4 col-lg-4 col-md-4'>";
+                                echo "<div class='thumbnail'>";
+                                echo "<img src='http://placekitten.com/320/320' alt=''>"; // $val['IMAGEURLHERE']
+                                echo "<div class='caption'>";
+                                echo "<h4 class='pull-right'>$" . $val['price'] ."</h4>";
+                                echo "<h4><a href='Product/" . $val['id'] ."'>" . $val['title'] . " by " . $val['artist'] ."</a><h4>";
+                                echo "<p>" . $val['description'] ."</p>";
+                                echo "</div></div></div>";
+                            }
+                        // }
 ?>
 
                         <div class="col-sm-4 col-lg-4 col-md-4">
@@ -64,7 +66,7 @@
                                 <img src="http://placekitten.com/320/320" alt="">
                                 <div class="caption">
                                     <h4 class="pull-right">$swag</h4>
-                                    <h4><a href="/Main/showProduct/">Take Care</a>
+                                    <h4><a href="/Main/showProduct/">Take Care (static)</a>
                                     </h4>
                                     <p>YOLO that's the motto.</p>
                                 </div>
@@ -76,7 +78,7 @@
                                 <img src="http://placekitten.com/320/320" alt="">
                                 <div class="caption">
                                     <h4 class="pull-right">$dank</h4>
-                                    <h4><a href="#">Another One</a>
+                                    <h4><a href="#">Another One (static)</a>
                                     </h4>
                                     <p>They don't want you to buy records.</p>
                                 </div>
@@ -88,7 +90,7 @@
                                 <img src="http://placekitten.com/320/320" alt="">
                                 <div class="caption">
                                     <h4 class="pull-right">$69.69</h4>
-                                    <h4><a href="#">Salad Tossing</a>
+                                    <h4><a href="#">Salad Tossing (static)</a>
                                     </h4>
                                     <p>Julian's staff pick.</p>
                                 </div>

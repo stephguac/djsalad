@@ -19,11 +19,11 @@ class User extends CI_Model {
 		$this->session->set_flashdata('vals','Successfully Registered!');
 	}
 
-	public function login($stuff) {
+	public function login($inputz) {
 		$sql = "SELECT * FROM users WHERE email = ? AND password = ?";
 		$params = [
-			$stuff['email'],
-			$stuff['password']
+			$inputz['email'],
+			$inputz['password']
 		];
 		return $this->db->query($sql, $params)->row_array();
 	}

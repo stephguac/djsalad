@@ -8,9 +8,9 @@ class Users extends CI_Controller {
         $this->load->model('User');
     }
 
-	public function index() {
-		$this->load->view('loginRegView');
-	}
+	// public function index() {
+	// 	$this->load->view('mainView'); 
+	// }
 	
 	public function register() {
 		$this->load->library("form_validation");
@@ -29,7 +29,7 @@ class Users extends CI_Controller {
 			$currentUser = $this->User->login($this->input->post());
 			$this->session->set_userdata('currentUser', $currentUser);
 		}	
-		$this->load->view('mainView');
+		redirect('/');
 	}
 
 	public function login() {
@@ -39,8 +39,8 @@ class Users extends CI_Controller {
         } else {
         	$this->session->set_flashdata('error', 'Invalid username or password.');
         }
-		$this->load->view('mainView');
-		// var_dump($this->input->post());
+        // $this->load->view('mainView');
+        redirect('/');
 	}
 
 	public function logout() {
