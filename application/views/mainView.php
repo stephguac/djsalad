@@ -25,10 +25,14 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-3">
-                    <form method="POST" action="Main/productSearchByName">
-                        <input id="search-input" type='text' name="search" placeholder="Product Name">
-                        <button type="submit" value="Search">&#128269;</button>
-                    </form>    
+                    <form>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search for...">
+                                <span class="input-group-btn">
+                                    <input class="btn btn-default" type="button" value="Go!"></input>
+                                </span>
+                        </div>
+                    </form>   
                     <br><h4>Genres</h4><br>
                     <div>
                        <a href="#" class="list-group-item">Pop/Top-40</a>

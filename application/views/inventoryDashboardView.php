@@ -14,46 +14,56 @@
      $this->load->view("partials/header.php");
 ?>
 
-    <div>
-        <form>
-            <input type="search" name="search" value="Search"></input>
-        </form>
-    </div>
-    <div>
+    <div class="container">
+        <div class="row">
 
-<!-- <?php var_dump($results) ?> -->
-     <table class="table">
-            <thead>
-                <tr>
-                    <th>Picture</th>
-                    <th>ID</th>
-                    <th>Name</th>
-                    <th>Inventory Count</th>
-                    <th>Quantity Sold</th>
-                    <th>Action</th>             
-                </tr>
-            </thead>
-            <tbody>
+                <div class="col-lg-6">
+                    <form>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search for...">
+                            <span class="input-group-btn">
+                                <input class="btn btn-default" type="button" value="Go!"></input>
+                            </span>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="col-md-12">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Picture</th>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Inventory Count</th>
+                                <th>Quantity Sold</th>
+                                <th>Action</th>             
+                            </tr>
+                        </thead>
+                        <tbody>
 <?php
-        foreach ($results as $val) {
-            $image = '<img src="' . $val['image_1'] . '"height="100" width="100">';
-            $id = $val['id'];
-            $title = $val['title'];
-            $remaining = $val['quantity_remaining'];
-            $sold = $val['quantity_sold'];
+                            foreach ($results as $val) {
+                                $image = '<img src="' . $val['image_1'] . '"height="100" width="100">';
+                                $id = $val['id'];
+                                $title = $val['title'];
+                                $remaining = $val['quantity_remaining'];
+                                $sold = $val['quantity_sold'];
 ?>
-                <tr>
-                    <td><?php echo $image; ?></td>
-                    <td><?php echo $id; ?></td>
-                    <td><?php echo $title; ?></td>
-                    <td><?php echo $remaining; ?></td>
-                    <td><?php echo $sold; ?></td>
-                    <td><a href="#">Edit</a>
-                    <?= '<a href="/Inventories/deleteProducts/' . $id . '">Delete</a>' ?></td>
-                </tr>
+                            <tr>
+                                <td><?php echo $image; ?></td>
+                                <td><?php echo $id; ?></td>
+                                <td><?php echo $title; ?></td>
+                                <td><?php echo $remaining; ?></td>
+                                <td><?php echo $sold; ?></td>
+                                <td><a href="#">Edit</a>
+                                <?= '<a href="/Inventories/deleteProducts/' . $id . '">Delete</a>' ?></td>
+                            </tr>
 <?php } ?>
-            </tbody>
-        </table> 
+                        </tbody>
+                    </table> 
+                </div>
+            </div>
+        </div>
     </div>
 
 <!-- Button trigger modal -->
