@@ -63,5 +63,5 @@ $route['Search'] = 'main/searchView';
 $route['Login'] = 'users/login';
 $route['Carts/(:num)'] = 'Carts/productAddToCart/$1';
 
-$route['shipping'] = 'CHANGE LATER';
-$route['billing'] = 'CHANGE LATER';
+$route['Orders'] = 'orders/displayOrders';
+$route['Orders/changeOrderStatus/(:num)'] = 'Orders/changeOrderStatus/$1';

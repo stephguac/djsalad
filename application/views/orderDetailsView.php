@@ -1,126 +1,57 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Order Details</title>
-
-        <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-
-        <!-- Optional theme -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
-
-        <!-- Latest compiled and minified JavaScript -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-
-        <script   src="https://code.jquery.com/jquery-2.2.3.js"   integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4="   crossorigin="anonymous"></script>
-
-<style type="text/css">
-
-#leftbox{
-    border-color: black;
-    border-style: solid;
-    border-width: 5px;
-    height: 550px;
-    width: 300px;
-    margin-left: 40px;
-    margin-right: 40px;
-}
-
-table, th, td {
-   border: 1px solid black;
-   border-collapse: collapse;
-}
-th, td {
-   padding: 15px;
-}
-
-#status{
-    position: relative;
-    left: -60px;
-    top: 47px;
-    border-color: black;
-    border-style: solid;
-    border-width: 5px;
-}
-
-#total{
-    position: relative;
-    left: -97px;
-    top: 1px;
-    border-color: black;
-    border-style: solid;
-    border-width: 5px;
-}
-
-</style>
+	<title>Order Details</title>
+<?php
+	$this->load->view("partials/head.php");
+	$this->load->view("partials/header.php");
+	// $orders->load->
+?>
 </head>
 <body>
-
-<nav class="navbar navbar-default">
- <div class="container-fluid">
-   <div class="navbar-header">
-     <a class="navbar-brand" href="#">Dashboard</a>
-   </div>
-    <div class="navbar-header">
-     <a class="navbar-brand" href="#">Orders</a>
-   </div>
-    <div class="navbar-header">
-     <a class="navbar-brand" href="#">Products</a>
-   </div>
-     <ul class="nav navbar-nav navbar-right">
-       <li><a href="#">log off</a></li>
-     </ul>
-   </div>
- </div>
-</nav>
-
-<div id="container">
-    <div class="row">
-        <div class="col-md-4" id="leftbox">
-            <p>Order blah blah blah blah</p>
-        </div>
-
-        <div class="col-md-8" id="rightbox">
-            <table style="width:80%">
-              <tr>
-                <td>ID</td>
-                <td>Item</td> 
-                <td>Price</td>
-                <td>Quantity</td>
-                <td>Total Price</td>
-              </tr>
-              <tr>
-                <td>35</td>
-                <td>cup</td> 
-                <td>$9.99</td>
-                <td>1</td>
-                <td>$9.99</td>
-              </tr>
-               <tr>
-                <td>215</td>
-                <td>shirt</td> 
-                <td>$19.99</td>
-                <td>2</td>
-                <td>$39.98</td>
-              </tr>
-            </table>
-
-            <div class="col-md-4 col-md-offset-2" id="status">
-            <p>Status Shipped</p>
-            </div>
-
-            <div class="col-md-4 col-md-offset-7" id="total">
-            <p>Sub total: $xxxx</p>
-            <p>Shipping: $xxxx</p>
-            <p>Total Price: $xxxx</p>
-            </div>
-
-        </div>
-    </div>
-
-
-
-</div>
-
+	<div>
+		<input class="search-order" type='text' name="search-order" value='' placeholder="search">
+		<select class="order-type-dropdown" name="order-status">
+		  <option>Show All</option>
+		  <option>Order In</option>
+		  <option>Shipped</option>
+		  <option>Cancelled</option>
+		</select>
+	</div>
+      <!-- this is the table head  -->
+<table class="table">
+	<tr>
+	    <td>Order ID</td>
+        <td>Name</td>
+        <td>Date</td>
+        <td>Billing Address</td>
+        <td>Total</td>
+        <td>Status</td>
+        <td>Edit Status</td>
+    </tr>
+<?php
+	// var_dump($orderArray);
+    foreach ($orderArray as $orderData) {
+    	echo '<tr>';
+    	echo '<td>' . $orderData['id'] . '</td>';
+    	echo '<td>' . $orderData['user_id'] . '</td>';
+    	echo '<td>' . $orderData['created_at'] . '</td>';
+		echo '<td>' . $orderData['billing_address_id'] . '</td>';
+		echo '<td>' . $orderData['total'] . '</td>';
+		echo '<td>' . $orderData['status'] . '</td>';?>
+		<td>
+		<form action="/Orders/changeOrderStatus/<?= $orderData['id'] ?>" method="POST">
+			<select class="order-type-dropdown" name="status">
+	            <option value="1">Order In</option>
+	            <option value="2">Shipped</option>
+	            <option value="3">Cancelled</option>
+          	</select>
+          	<input class="btn btn-primary btn-sm"type="submit"></input>
+	    </form>
+        </td>
+<?php 	echo '</tr>';
+	}
+?>
+	</table>
 </body>
 </html>
