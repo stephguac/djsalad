@@ -62,6 +62,7 @@ $route['Admin'] = 'Main/adminView';
 $route['Search'] = 'Main/searchView';
 $route['Login'] = 'Users/login';
 $route['Carts/(:num)'] = 'Carts/productAddToCart/$1';
+$route['Carts/r/(:num)'] = 'Carts/removeItem/$1';
 
 $route['Orders'] = 'orders/displayOrders';
 $route['Orders/changeOrderStatus/(:num)'] = 'Orders/changeOrderStatus/$1';
