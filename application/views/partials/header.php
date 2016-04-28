@@ -9,7 +9,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/">DJ Salad</a>
+                <a class="navbar-brand" href="/">DJ SALAD<img src="http://i.imgur.com/NsxuaQv.png" height='25' width='25'></a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -21,7 +21,7 @@
                         <a href="/Search">Albums</a>
                     </li>
                     <li>
-                        <a href="Contact">Contact</a>
+                        <a href="/Contact">Contact</a>
                     </li>
                     <li class="dropdown">
                     <li>
