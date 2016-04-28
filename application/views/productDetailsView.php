@@ -39,7 +39,7 @@
                     <img class="img-responsive" src="http://placekitten.com/800/400" alt="">
                     <div class="caption-full">
                         <h4 class="pull-right"><?= '$' . $indivDetails['price'] ?>
-                        <a href="Main/productAddToCart/<?= $prod_id; ?>"><span class="btn btn-success">Add to Cart</span>
+                        <a href="/Carts/<?= $prod_id; ?>"><span class="btn btn-success">Add to Cart</span>
                         </h4>
                         <h4><a href="#"><?= $indivDetails['title'] . ' by ' . $indivDetails['artist'] . ' (' . $indivDetails['genre'] . ') ' ; ?></a></h4>
                         <p class="description">
