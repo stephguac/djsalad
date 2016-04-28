@@ -57,9 +57,11 @@ $route['translate_uri_dashes'] = FALSE;
 $route['Contact'] = 'main/contactView';
 $route['About'] = 'main/aboutView';
 $route['Register'] = 'main/registerView';
-$route['Product'] = 'main/productDetailView';
+$route['Product/(:num)'] = 'main/showProduct/$1';
 $route['Admin'] = 'main/adminView';
 $route['Search'] = 'main/searchView';
+$route['Login'] = 'users/login';
+$route['Cart/(:num)'] = 'carts/add/$1';
 
 $route['shipping'] = 'CHANGE LATER';
 $route['billing'] = 'CHANGE LATER';

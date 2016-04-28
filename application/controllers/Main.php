@@ -3,6 +3,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Main extends CI_Controller {
 
+	public function __construct() {
+        parent::__construct();
+        $this->load->model('Inventory');
+    }
+
 	public function index() {
 		$this->load->model('Inventory');
 		$results = $this->Inventory->createMainTables();
@@ -10,9 +15,13 @@ class Main extends CI_Controller {
 		$this->load->view('mainView', $data);
 	}
 
-	public function showProduct()
-	{
-		$this->load->view('inventoryDetailsView');
+	public function showProduct($prod_id) {
+
+		$results = $this->Inventory->getProduct($prod_id);
+		$data['indivDetails'] = $results;
+		$data['prod_id'] = $prod_id;
+		$this->load->view('productDetailsView', $data);
+		// what's with main/productPage ?
 	}
 
 	public function contactView() {
@@ -57,16 +66,17 @@ class Main extends CI_Controller {
 	}
 
 	public function productPage() {
-		//individual page for each product
+		//individual page for each product, main/showProduct? can we delete this
 		$this->load->view('productDetailsView');
 	}
 
 	public function productAddToCart($productID) {
 		// form process, show "added to cart"
+		$userID = $this->session->userdata('currentUser')['id'];
 		$this->load->model('Cart');
 		$this->Cart->productAddToCart($productID);
 		$this->load->view('cartView');
-
+		$this->Cart->productAddToCart($productID, $userID);
 	}
 
 	public function displaySimilarProducts() {
