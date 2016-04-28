@@ -1,3 +1,12 @@
+<?php
+
+    defined('BASEPATH') OR exit('No direct script access allowed');
+    
+    // if ($this->session->currentUser !==true) {
+    //     redirect('/');
+    // }
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -135,12 +144,12 @@
 
                     <div class="form-group">
                         <label for="image1">Front Cover</label>
-                        <input type="file" name="userfile" id="image1" />
+                        <input type="text" name="image1" id="image1" class="form-control" />
                     </div>
  
                     <div class="form-group">
                         <label for="image2">Back Cover</label>
-                        <input type="file" name="image2" id="image2" />
+                        <input type="text" name="image2" id="image2" class="form-control" />
                     </div>
 
                 <div class="modal-footer">

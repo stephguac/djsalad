@@ -13,14 +13,13 @@ class Upload extends CI_Controller {
 	}
 
 	function do_upload() {
-		$config['upload_path'] = './uploads/';
-		$config['allowed_types'] = 'gif|jpg|png';
+		// $config['upload_path'] = './uploads/';
+		// $config['allowed_types'] = 'gif|jpg|png';
 
-		$this->load->library('upload', $config);
-		$data = array('upload_data' => $this->upload->data());
+		// $this->load->library('upload', $config);
+		// $data = array('upload_data' => $this->upload->data());
 		$this->Inventory->addInventory($this->input->post());
-
-
+		redirect('/inventories/index');
 	}
 }
 ?>
