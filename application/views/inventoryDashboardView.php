@@ -91,7 +91,8 @@
             <!-- Modal Body -->
             <div class="modal-body">
                 
-                <form role="form" action="/inventories/addInventory" method="post">
+        <!--    <form role="form" action="/inventories/addInventory" method="post"> -->
+                <?php echo form_open_multipart('upload/do_upload');?>
                     <div class="form-group">
                         <label for="title">Title</label>
                         <input type="text" name="title" class="form-control" id="name" placeholder="Enter name"/>
@@ -132,14 +133,14 @@
                         <input type="text" name="sold" class="form-control" id="sold" placeholder="Enter Quanity Sold"/>
                     </div>
 
-                     <div class="form-group">
-                        <label for="image1">Image URL 1</label>
-                        <input type="text" name="image1" class="form-control" id="image1" placeholder="Enter Image URL"/>
+                    <div class="form-group">
+                        <label for="image1">Front Cover</label>
+                        <input type="file" name="userfile" id="image1" />
                     </div>
-
-                     <div class="form-group">
-                        <label for="image2">Image URL 2</label>
-                        <input type="text" name="image2" class="form-control" id="image2" placeholder="Enter Image URL"/>
+ 
+                    <div class="form-group">
+                        <label for="image2">Back Cover</label>
+                        <input type="file" name="image2" id="image2" />
                     </div>
 
                 <div class="modal-footer">

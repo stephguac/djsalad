@@ -36,6 +36,7 @@ class Inventories extends CI_Controller {
 
 	public function addInventory() {
 		// add a new product to inventory from modal.
+		
 		$this->Inventory->addInventory($this->input->post());
 		$this->displayInventory();
 	}
