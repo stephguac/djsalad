@@ -26,17 +26,20 @@
         <div class="row">
 
             <div class="col-md-3">
-                <div class="list-group">
-                    <a href="#" class="list-group-item active">Category 1</a>
-                    <a href="#" class="list-group-item">Category 2</a>
-                    <a href="#" class="list-group-item">Category 3</a>
-                </div>
+              <h4>Genres</h4><br>
+                    <div>
+                       <a href="#" class="list-group-item">Pop/Top-40</a>
+                       <a href="#" class="list-group-item">Alternative</a>
+                       <a href="#" class="list-group-item">Rap/Hip-Hop/RnB</a>
+                       <a href="#" class="list-group-item">Oldies</a>
+                       <a href="#" class="list-group-item">Rock</a>
+                    </div>
             </div>
 
             <div class="col-md-9">
 
                 <div class="thumbnail">
-                    <img class="img-responsive" src="http://placekitten.com/800/400" alt="">
+                    <?= '<img src="' . $indivDetails['image_1'] . '"height="800" width="800">' ?>
                     <div class="caption-full">
                         <h4 class="pull-right"><?= '$' . $indivDetails['price'] ?>
                         <a href="/Carts/<?= $prod_id; ?>"><span class="btn btn-success">Add to Cart</span>
@@ -47,48 +50,6 @@
                         </p>
                     </div>
                 </div>
-
-                <h1>Other Items You May Like</h1>
-
-                    <div class="row">
-
-                        <div class="col-sm-4 col-lg-4 col-md-4">
-                            <div class="thumbnail">
-                                <img src="http://placekitten.com/320/320" alt="">
-                                <div class="caption">
-                                    <h4 class="pull-right">$24.99</h4>
-                                    <h4><a href="/Main/showProduct/">An Album</a>
-                                    </h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-4 col-lg-4 col-md-4">
-                            <div class="thumbnail">
-                                <img src="http://placekitten.com/320/320" alt="">
-                                <div class="caption">
-                                    <h4 class="pull-right">$19.99</h4>
-                                    <h4><a href="#">Another Album</a>
-                                    </h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-4 col-lg-4 col-md-4">
-                            <div class="thumbnail">
-                                <img src="http://placekitten.com/320/320" alt="">
-                                <div class="caption">
-                                    <h4 class="pull-right">$19.99</h4>
-                                    <h4><a href="#">Some Album</a>
-                                    </h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                </div>
-                            </div>
-                        </div>
-      
-                    </div>
 
             </div>
 
