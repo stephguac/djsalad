@@ -52,7 +52,7 @@
 	</h4>
 	</div>
 	<div>
-		<a href="???URL FOR HOME???"><button>Continue Shopping</button></a>
+		<a href="Main"><button>Continue Shopping</button></a>
 	</div>
 	<div>
 		<form action="address" method="post">
