@@ -25,6 +25,7 @@ class Users extends CI_Controller {
 		}
 		else {
 			$this->User->register($this->input->post());
+			
 			$currentUser = $this->User->login($this->input->post());
 			$this->session->set_userdata('currentUser', $currentUser);
 		}	

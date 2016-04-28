@@ -10,9 +10,9 @@ class Main extends CI_Controller {
 		$this->load->view('mainView', $data);
 	}
 
-	public function showProduct()
-	{
-		$this->load->view('inventoryDetailsView');
+	public function showProduct($prod_id) {
+		$data['prod_id'] = $prod_id;
+		$this->load->view('productDetailsView', $data);
 	}
 
 	public function contactView() {
@@ -63,8 +63,9 @@ class Main extends CI_Controller {
 
 	public function productAddToCart($productID) {
 		// form process, show "added to cart"
+		$userID = $this->session->userdata('currentUser')['id'];
 		$this->load->model('Cart');
-		$this->Cart->productAddToCart($productID);
+		$this->Cart->productAddToCart($productID, $userID);
 
 	}
 
