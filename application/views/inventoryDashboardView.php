@@ -28,6 +28,11 @@
                     </form>
                 </div>
 
+                <!-- Button trigger modal -->
+                <button class="btn btn-primary pull-right" data-toggle="modal" data-target="#myModalNorm">
+                    Add Product
+                </button>
+
                 <div class="col-md-12">
                     <table class="table">
                         <thead>
@@ -65,11 +70,6 @@
             </div>
         </div>
     </div>
-
-<!-- Button trigger modal -->
-<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModalNorm">
-    Add Product
-</button>
 
 <!-- Modal -->
 <div class="modal fade" id="myModalNorm" tabindex="-1" role="dialog" 
