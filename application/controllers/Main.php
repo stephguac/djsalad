@@ -74,8 +74,9 @@ class Main extends CI_Controller {
 		// form process, show "added to cart"
 		$userID = $this->session->userdata('currentUser')['id'];
 		$this->load->model('Cart');
+		$this->Cart->productAddToCart($productID);
+		$this->load->view('cartView');
 		$this->Cart->productAddToCart($productID, $userID);
-
 	}
 
 	public function displaySimilarProducts() {
