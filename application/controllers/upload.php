@@ -21,7 +21,7 @@ class Upload extends CI_Controller {
 
 		$this->load->library('upload', $config);
 
-		if (!$this->upload->do_upload('file_upload'))
+		if (!$this->Upload->do_upload('file_upload'))
         {
         	var_dump($this->upload->display_errors());
         	die("came in the errors");
