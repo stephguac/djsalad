@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>DJ Salad Home Page</title>
+    <title>DJ SALAD TOSSING HITZ</title>
 
 <?php
     $this->load->view("partials/head.php");

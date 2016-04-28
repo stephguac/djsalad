@@ -3,6 +3,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Main extends CI_Controller {
 
+	public function __construct() {
+        parent::__construct();
+        $this->load->model('Inventory');
+    }
+
 	public function index() {
 		$this->load->model('Inventory');
 		$results = $this->Inventory->createMainTables();
@@ -11,9 +16,12 @@ class Main extends CI_Controller {
 	}
 
 	public function showProduct($prod_id) {
+
+		$results = $this->Inventory->getProduct($prod_id);
+		$data['indivDetails'] = $results;
 		$data['prod_id'] = $prod_id;
 		$this->load->view('productDetailsView', $data);
-		// main/productPage?
+		// what's with main/productPage ?
 	}
 
 	public function contactView() {

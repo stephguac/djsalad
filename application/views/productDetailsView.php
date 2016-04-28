@@ -38,12 +38,13 @@
                 <div class="thumbnail">
                     <img class="img-responsive" src="http://placekitten.com/800/400" alt="">
                     <div class="caption-full">
-                        <h4 class="pull-right">$24.99 
+                        <h4 class="pull-right"><?= '$' . $indivDetails['price'] ?>
                         <a href="Main/productAddToCart/<?= $prod_id; ?>"><span class="btn btn-success">Add to Cart</span>
                         </h4>
-                        <h4><a href="#">Product Name</a></h4>
-                        <?php var_dump($prod_id); ?>
-                        <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                        <h4><a href="#"><?= $indivDetails['title'] . ' by ' . $indivDetails['artist'] . ' (' . $indivDetails['genre'] . ') ' ; ?></a></h4>
+                        <p class="description">
+                            <?= $indivDetails['description'] . ' (' . $indivDetails['quantity_remaining'] . ' in stock) '; ?>
+                        </p>
                     </div>
                 </div>
 
@@ -55,7 +56,7 @@
                             <div class="thumbnail">
                                 <img src="http://placekitten.com/320/320" alt="">
                                 <div class="caption">
-                                    <h4 class="pull-right">$19.99</h4>
+                                    <h4 class="pull-right">$24.99</h4>
                                     <h4><a href="/Main/showProduct/">An Album</a>
                                     </h4>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
