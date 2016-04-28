@@ -146,11 +146,6 @@
                         <label for="image1">Front Cover</label>
                         <input type="file" name="file_upload" id="image1" class="form-control" />
                     </div>
- 
-                    <div class="form-group">
-                        <label for="image2">Back Cover</label>
-                        <input type="text" name="image2" id="image2" class="form-control" />
-                    </div>
 
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

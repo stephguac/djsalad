@@ -12,9 +12,9 @@ class Inventory extends CI_Model {
 			$formData['artist'],
 			$formData['description'],
 			$formData['genre'],
-			$formData['remaining'],
-			$formData['sold'],
 			$formData['price'],
+			$formData['remaining'],
+			$formData['sold'],	
 			$formData2['full_path'],
 		];
 		$this->db->query($sql, $params);
