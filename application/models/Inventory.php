@@ -5,18 +5,17 @@ class Inventory extends CI_Model {
 
 	// INVENTORIES A.K.A. PRODUCTS
 
-	public function addInventory($formData) {
-		$sql = "INSERT INTO products (title, artist, description, genre, price, quantity_remaining, quantity_sold, image_1, image_2, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, NOW(), NOW())";
+	public function addInventory($formData, $formData2) {
+		$sql = "INSERT INTO products (title, artist, description, genre, price, quantity_remaining, quantity_sold, image_1, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, NOW(), NOW())";
 		$params = [
 			$formData['title'],
 			$formData['artist'],
 			$formData['description'],
 			$formData['genre'],
-			$formData['remaining'],
-			$formData['sold'],
 			$formData['price'],
-			$formData['image1'],
-			$formData['image2']
+			$formData['remaining'],
+			$formData['sold'],	
+			$formData2['full_path'],
 		];
 		$this->db->query($sql, $params);
 	}
