@@ -36,8 +36,23 @@ class Cart extends CI_Model {
 	// 	} 
 	// }
 
+	public function productRemoveFromCart($productID, $userID) {
+		$sql0 = "SELECT carts.id FROM carts
+				LEFT JOIN users ON carts.user_id = users.id
+				WHERE users.id = ?";
+		$params0 = [
+			$userID
+		];
+		$cartID = $this->db->query($sql0, $params0)->row_array();
+
+		$sql = "DELETE FROM cart_product
+				WHERE cart_id = {$cartID['id']} AND product_id = $productID";
+		$this->db->query($sql);
+
+	}
+
 	public function getUsersCart($userID) {
-		$sql = "SELECT products.title, products.artist, products.genre, products.price, products.image_1
+		$sql = "SELECT cart_product.product_id, products.title, products.artist, products.genre, products.price, products.image_1
 			FROM cart_product 
 			LEFT JOIN carts ON cart_product.cart_id = carts.id 
 			LEFT JOIN products ON cart_product.product_id = products.id
