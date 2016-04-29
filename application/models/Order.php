@@ -83,4 +83,5 @@ class Order extends CI_Model
 
 		$sql = "UPDATE orders SET orders.status = $newStatus WHERE orders.id = $orderID";	
 		// joe's part? 
+	}
 }
