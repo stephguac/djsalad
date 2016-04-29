@@ -55,4 +55,13 @@
 ?>
 	</table>
 </body>
+
+<div class="container">
+
+        <hr>
+
+<?php
+    $this->load->view("partials/footer.php");
+?>
+
 </html>
