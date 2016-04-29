@@ -13,7 +13,7 @@
 <?php
 
 ?>
-	<div>
+	<div class="container">
 		<table class="table">
 			<tr>
 				<td>Picture</td>
@@ -23,12 +23,14 @@
 				<td>Price</td>
 			</tr>
 <?php
+			// var_dump($cartData);
 			foreach($cartData as $cd) {
 				$url = $cd['image_1'];
 				$title = $cd['title'];
 				$artist = $cd['artist'];
 				$genre = $cd['genre'];
 				$price = $cd['price'];
+				$prod_id = $cd['product_id'];
 ?>
 			<tr>
 				<td><img src="<?= $url ?>" width='50' height='50'></td>
@@ -36,6 +38,7 @@
 				<td><?= $artist ?></td>
 				<td><?= $genre ?></td>
 				<td>$<?= $price ?></td>
+				<td><form action="/Carts/r/<?= $prod_id; ?>" method="POST"><input type="submit" name="" value="Remove"/></form></td>
 			</tr>
 <?php 
 			}
@@ -52,33 +55,35 @@
 	</h4>
 	</div>
 	<div>
-		<a href="???URL FOR HOME???"><button>Continue Shopping</button></a>
+		<a href="/"><button>Continue Shopping</button></a>
 	</div>
 	<div>
 		<form action="address" method="post">
-		<h2>Shipping Information</h2>
-			First Name: <input type="text" name="firstNameS"><br>
-			Last Name: <input type="text" name="lastNameS"><br>
-			Address: <input type="text" name="addressS"><br>
-			Address 2: <input type="text" name="address2S"><br>
-			City: <input type="text" name="cityS"><br>
-			State: <input type="text" name="stateS"><br>
-			Zipcode: <input type="text" name="zipcodeS"><br>
-		<h2>Billing Information</h2>
-			<input type="checkbox" name="sameAsShipping"> Same as Shipping
-			First Name: <input type="text" name="firstNameB"><br>
-			Last Name: <input type="text" name="lastNameB"><br>
-			Address: <input type="text" name="addressB"><br>
-			Address 2: <input type="text" name="address2B"><br>
-			City: <input type="text" name="cityB"><br>
-			State: <input type="text" name="stateB"><br>
-			Zipcode: <input type="text" name="zipcodeB"><br>
-		<br>
-			Card: <input type="text" name="card"><br>
-			Security Code: <input type="text" name="security"><br>
-			Expiration: <input type="month" name="expiration"><br>
-		<input type="submit" value="Pay"></input>
+			<h2>Shipping Information</h2>
+				First Name: <input type="text" name="firstNameS"><br>
+				Last Name: <input type="text" name="lastNameS"><br>
+				Address: <input type="text" name="addressS"><br>
+				Address 2: <input type="text" name="address2S"><br>
+				City: <input type="text" name="cityS"><br>
+				State: <input type="text" name="stateS"><br>
+				Zipcode: <input type="text" name="zipcodeS"><br>
+			<h2>Billing Information</h2>
+				<input type="checkbox" name="sameAsShipping"> Same as Shipping
+				First Name: <input type="text" name="firstNameB"><br>
+				Last Name: <input type="text" name="lastNameB"><br>
+				Address: <input type="text" name="addressB"><br>
+				Address 2: <input type="text" name="address2B"><br>
+				City: <input type="text" name="cityB"><br>
+				State: <input type="text" name="stateB"><br>
+				Zipcode: <input type="text" name="zipcodeB"><br>
+			<br>
+				Card: <input type="text" name="card"><br>
+				Security Code: <input type="text" name="security"><br>
+				Expiration: <input type="month" name="expiration"><br>
+			<input type="submit" value="Pay"></input>
 		</form>
 	</div>
 </body>
 </html>
+
+

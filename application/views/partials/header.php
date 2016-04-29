@@ -9,23 +9,23 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/">DJ Salad</a>
+                <a class="navbar-brand" href="/">DJ SALAD<img src="http://i.imgur.com/NsxuaQv.png" height='25' width='25'></a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="About">About</a>
+                        <a href="/About">About</a>
                     </li>
                     <li>
-                        <a href="Search">Albums</a>
+                        <a href="/Search">Albums</a>
                     </li>
                     <li>
-                        <a href="Contact">Contact</a>
+                        <a href="/Contact">Contact</a>
                     </li>
                     <li class="dropdown">
                     <li>
-                        <a href="Register">Register</a>
+                        <a href="/Register">Register</a>
                     </li>                    
                     <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>

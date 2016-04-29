@@ -59,7 +59,7 @@
                                 echo '<img src="' . $val['image_1'] . '"height="320" width="320">';
                                 echo "<div class='caption'>";
                                 echo "<h4 class='pull-right'>$" . $val['price'] ."</h4>";
-                                echo "<h4><a href='Product/" . $val['id'] ."'>" . $val['title'] . "<br/> by " . $val['artist'] ."</a></h4>";
+                                echo "<h4><a href='/Product/" . $val['id'] ."'>" . $val['title'] . "<br/> by " . $val['artist'] ."</a></h4>";
                                 echo "<p>" . $val['description'] ."</p>";
                                 echo "</div></div></div>";
                             }
