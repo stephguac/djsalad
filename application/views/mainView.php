@@ -46,14 +46,9 @@
 
                     <div class="row">
 <?php
-                        // var_dump($results);
-                        // if ($results) {
                             foreach ($results as $val) {
-
                                 if(strlen($val['description']) > 80) $val['description'] = substr($val['description'], 0, 80).'...';
-
                                 if(strlen($val['title']) > 22) $val['title'] = substr($val['title'], 0, 22).'...';
-
                                 echo "<div class='col-sm-4 col-lg-4 col-md-4'>";
                                 echo "<div class='thumbnail'>";
                                 echo '<img src="/uploads/' . $val['image_1'] . '"height="320" width="320">';
@@ -63,9 +58,7 @@
                                 echo "<p>" . $val['description'] ."</p>";
                                 echo "</div></div></div>";
                             }
-                        // }
 ?>
-
                     </div>
 
                 </div> <!-- col-md-9 -->
