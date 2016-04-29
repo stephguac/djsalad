@@ -101,7 +101,7 @@
             <div class="modal-body">
                 
         <!--    <form role="form" action="/inventories/addInventory" method="post"> -->
-                <form role"form" action="/Upload/do_upload" method="post" enctype="multipart/form-data">
+                <form role"form" action="/Uploads/do_upload" method="post" enctype="multipart/form-data">
                     <div class="form-group">
                         <label for="title">Title</label>
                         <input type="text" name="title" class="form-control" id="name" placeholder="Enter name"/>

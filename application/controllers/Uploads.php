@@ -1,6 +1,6 @@
 <?php
 
-class Upload extends CI_Controller {
+class Uploads extends CI_Controller {
 
 	function __construct() {
 		parent::__construct();
@@ -21,7 +21,7 @@ class Upload extends CI_Controller {
 
 		$this->load->library('upload', $config);
 
-		if (!$this->Upload->do_upload('file_upload'))
+		if (!$this->upload->do_upload('file_upload'))
         {
         	var_dump($this->upload->display_errors());
         	die("came in the errors");
