@@ -4,9 +4,23 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Orders extends CI_Controller {
 	
 	public function index() {
-		$this->load->view('orderDashboardView');
+		$this->load->view('orderDetailsView');
 	}
 	
+	public function placeOrder() {
+		//add both shipping and billing addresses into db from form data
+		$this->load->model('Order');
+		$SA = $this->Order->addShippingAddress($this->input->post());
+		if(isset($this->input->post('sameAsShipping'))) {
+			$BA = $this->Order->shippingIsBilling($this->input->post());
+		}
+		else {
+			$BA = $this->Order->addBillingAddress($this->input->post());
+		}
+		$this->Order->addOrder($SA, $BA);
+		// add stripe functionality here!
+	}
+
 	public function displayOrders() {
 		$this->load->model('Order');
 		$result = $this->Order->getOrders();
@@ -33,12 +47,6 @@ class Orders extends CI_Controller {
 
 		$this->load->view('orderDetailsView', $filterData);
 		// filter orders - order in, shipped, cancelled. process from form data dropdown menu
-	}
-
-	public function changeOrderStatus() {
-		//process dropdown form data to change order status in db
-		$this->load->model('order');
-		$this->order->changeOrderStatus($this->input->post());
 	}
 
 	public function displayOrderDetails() {

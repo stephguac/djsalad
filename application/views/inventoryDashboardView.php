@@ -64,7 +64,7 @@
                                 $sold = $val['quantity_sold'];
 ?>
                             <tr>
-                                <td><?php echo $image; ?></td>
+                                <td><img src="<?php echo $image; ?>"></td>
                                 <td><?php echo $id; ?></td>
                                 <td><?php echo $title; ?></td>
                                 <td><?php echo $remaining; ?></td>

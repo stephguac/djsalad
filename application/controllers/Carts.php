@@ -10,13 +10,6 @@ class Carts extends CI_Controller {
 		$this->load->view('cartView', $data);
 	}
 
-	public function displayCartTable() {
-		//populates cart table
-	}
-
-	public function addAddresses() {
-		//add both shipping and billing addresses into db from form data
-	}
 	public function productAddToCart($productID) {
 		// form process, show "added to cart"
 		$userID = $this->session->userdata('currentUser')['id'];

@@ -11,7 +11,7 @@ class Admins extends CI_Controller {
 		$this->load->model('Admin');
 		$currentUser = $this->Admin->adminLogin($this->input->post());
 		$this->session->set_userdata('currentUser', $currentUser);
-		$this->load->view('orderDashboardView');
+		redirect('/inventories/displayInventory');
 	}
 
 }

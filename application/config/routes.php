@@ -64,4 +64,5 @@ $route['Login'] = 'Users/login';
 $route['Carts/(:num)'] = 'Carts/productAddToCart/$1';
 
 $route['Orders'] = 'orders/displayOrders';
-$route['Orders/changeOrderStatus/(:num)'] = 'Orders/changeOrderStatus/$1';
+$route['ChangeStatus/(:num)'] = 'Orders/changeOrderStatus/$1';
+// $route['Orders/changeOrderStatus/(:num)'] = 'Orders/changeOrderStatus/$1';

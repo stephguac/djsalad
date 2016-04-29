@@ -3,13 +3,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Order extends CI_Model 
 {
-	public function addOrder($orderData) {
+	public function addOrder($SA, $BA) {
 		$sql = "INSERT INTO orders (user_id, created_at, updated_at, billing_address_id, total, status) VALUES (?, NOW(), NOW(), ?, ?, 1)";
 		$params = [
-			$orderData['user_id'],  // to referencing the users name
-			$orderData['created_at'],
-			$orderData['updated_at'],
-			$orderData['billing_address_id'],
+			$this->session->userdata('currentUser')['id'],
+			$SA['id'],
+			$BA['id'],
 			$orderData['total'],  // this might need to be added to the DataBase
 		];
 		$this->db->query($sql, $params);
@@ -43,11 +42,38 @@ class Order extends CI_Model
 
 		}
 	}
-	public function changeOrderStatus($orderID, $newStatus) {
-		$sql = "UPDATE orders SET orders.status = $newStatus WHERE orders.id = $orderID";
+	public function addShippingAddress($input) {
+		$sql = "INSERT INTO addresses (user_id, type, address, city, state, zipcode) VALUES (?, 'shipping', ?, ?, ?, ?)";
 		$params = [
-			$orderID
+			$this->session->userdata('currentUser')['id'],
+			$input['addressS'],
+			$input['cityS'],
+			$input['stateS'],
+			$input['zipcodeS'],
 		];
 		return $this->db->query($sql, $params);
 	}
+	public function shippingIsBilling($input) {
+		$sql = "INSERT INTO addresses (user_id, type, address, city, state, zipcode) VALUES (?, 'billing', ?, ?, ?, ?)";
+		$params = [
+			$this->session->userdata('currentUser')['id'],
+			$input['addressS'],
+			$input['cityS'],
+			$input['stateS'],
+			$input['zipcodeS'],
+		];
+		return $this->db->query($sql, $params);		
+	}
+
+	public function addBillingAddress($input) {
+		$sql = "INSERT INTO addresses (user_id, type, address, city, state, zipcode) VALUES (?, 'billing', ?, ?, ?, ?)";
+		$params = [
+			$this->session->userdata('currentUser')['id'],
+			$input['addressB'],
+			$input['cityB'],
+			$input['stateB'],
+			$input['zipcodeB'],
+		];
+		$this->db->query($sql, $params);		
+	}		
 }
