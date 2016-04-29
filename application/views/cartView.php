@@ -23,7 +23,7 @@
 				<td>Price</td>
 			</tr>
 <?php
-
+			// var_dump($cartData);
 			foreach($cartData as $cd) {
 				$url = $cd['image_1'];
 				$title = $cd['title'];

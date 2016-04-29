@@ -61,7 +61,7 @@ $route['Product/(:num)'] = 'Main/showProduct/$1';
 $route['Admin'] = 'Main/adminView';
 $route['Search'] = 'Main/searchView';
 $route['Login'] = 'Users/login';
-$route['Carts/(:num)'] = 'Carts/productAddToCart/$1';
+$route['Carts/a/(:num)'] = 'Carts/productAddToCart/$1';
 $route['Carts/r/(:num)'] = 'Carts/removeItem/$1';
 
 $route['Orders'] = 'orders/displayOrders';
