@@ -8,7 +8,7 @@
 ?>
 </head>
 <body>
-	<h1>Your order was successful. Thanks for shopping with DJ Salad!</h1>
-	<a href="/"><button>Continue Shopping</button></a>
+	<h1>Your order was successful. Thanks for shopping with DJ Salad! I appreciate you.</h1>
+	<a href="/"><button>THE PATHWAY TO MORE SUCCESS</button></a>
 </body>
 </html>
