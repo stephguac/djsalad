@@ -34,13 +34,6 @@ class Inventories extends CI_Controller {
 		$this->load->view('inventoryDashboardView', $data);
 	}
 
-	public function addInventory() {
-		// add a new product to inventory from modal.
-		
-		$this->Inventory->addInventory($this->input->post());
-		$this->displayInventory();
-	}
-
 	public function editInventory() {
 		// edit inventory/product details for individual product.
 	}
