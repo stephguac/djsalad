@@ -53,11 +53,9 @@
 			echo "$".$sum;
 ?>
 	</h4>
-	</div>
 	<div>
 		<br><br><a href="/"><button>Continue Shopping</button></a><br><hr><br>
 	</div>
-
 	<form action="/Orders/placeOrder" method="post" style='margin-left: 10px'>
 		<h2>Shipping Information</h2><br>
 		<div class='form-group row'>
@@ -124,7 +122,7 @@
                 data-locale="auto">
               </script>
 	</form>
-
+</div>
 
 </body>
 
