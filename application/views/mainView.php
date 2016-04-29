@@ -68,7 +68,7 @@
         </div>
         <!-- /.container -->
 
-        <img id="banner" src="http://www.f1autocentres.co.uk/images/banner-all-season-tyres.jpg">
+        <a href="http://www.blockleytyre.com/"><img id="banner" src="http://www.f1autocentres.co.uk/images/banner-all-season-tyres.jpg"></a>
 
         <div class="container">
 
