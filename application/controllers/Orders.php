@@ -11,7 +11,7 @@ class Orders extends CI_Controller {
 		//add both shipping and billing addresses into db from form data
 		$this->load->model('Order');
 		$SA = $this->Order->addShippingAddress($this->input->post());
-		if(isset($this->input->post('sameAsShipping'))) {
+		if(!$this->input->post('sameAsShipping')) {
 			$BA = $this->Order->shippingIsBilling($this->input->post());
 		}
 		else {

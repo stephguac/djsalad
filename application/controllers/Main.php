@@ -37,6 +37,7 @@ class Main extends CI_Controller {
 	}
 
 	public function adminView() {
+		
 		$this->load->view('adminLoginView');
 	}
 
