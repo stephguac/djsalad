@@ -25,6 +25,10 @@ class Carts extends CI_Controller {
 	public function productAddToCart($productID) {
 		// form process, show "added to cart"
 		$userID = $this->session->userdata('currentUser')['id'];
+		$this->load->model('Cart');
+		if(!$this->Cart->getUsersCart($userID)) {
+			$this->Cart->createCart($userID);
+		}
 		$this->Cart->productAddToCart2($productID, $userID);
 		redirect('/Carts/index');
 		// $this->load->view('cartView', $data);

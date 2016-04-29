@@ -48,7 +48,6 @@ class Cart extends CI_Model {
 		$sql = "DELETE FROM cart_product
 				WHERE cart_id = {$cartID['id']} AND product_id = $productID";
 		$this->db->query($sql);
-
 	}
 
 	public function getUsersCart($userID) {
@@ -63,7 +62,12 @@ class Cart extends CI_Model {
 		return $this->db->query($sql, $params)->result_array();
 	}
 
-	// public function emptyCart() {
-		
-	// }
+	public function emptyCart($userID) {
+		// make sure fk constraints on cart_product at cart_id column is set to cascade
+		$sql = "DELETE FROM carts WHERE carts.user_id = ?";
+		$params = [
+			$userID
+		];
+		$this->db->query($sql, $params);
+	}
 }

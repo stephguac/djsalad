@@ -20,7 +20,7 @@ class Orders extends CI_Controller {
 		$this->Order->addOrder($SA, $BA);
 		// add stripe functionality here!
 		$this->load->model('Cart');
-		// $this->Cart->emptyCart();
+		$this->Cart->emptyCart($this->session->userdata('currentUser')['id']);
 		$this->load->view('orderSuccessView');
 		}
 
