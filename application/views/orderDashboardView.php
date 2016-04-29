@@ -10,6 +10,7 @@
 </head>
 <body>
 	<div>
+		<a href="/Inventory">Inventory</a>
 		<input class="search-order" type='text' name="search-order" value='' placeholder="search">
 		<select class="order-type-dropdown" name="order-status">
 		  <option>Show All</option>
