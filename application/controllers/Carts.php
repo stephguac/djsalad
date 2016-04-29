@@ -14,8 +14,6 @@ class Carts extends CI_Controller {
 		$this->load->view('cartView', $data);
 	}
 
-<<<<<<< HEAD
-=======
 	public function displayCartTable() {
 		//populates cart table
 	}
@@ -24,7 +22,6 @@ class Carts extends CI_Controller {
 		//add both shipping and billing addresses into db from form data
 	}
 
->>>>>>> b0d56452ab7ddc444457d38e8d842a6bff5d3343
 	public function productAddToCart($productID) {
 		// form process, show "added to cart"
 		$userID = $this->session->userdata('currentUser')['id'];
