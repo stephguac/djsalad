@@ -110,17 +110,7 @@
 			<label for='inputZip1b' class='col-sm-1 form-control-label'>Zipcode</label>
 			<div class="col-sm-4"><input type="text" class="form-control" id='inputZip1b' name="zipcodeB" placeholder='Zipcode'/></div>
 		</div><br><hr><br>
-	</form>
-	<form action="" method="POST">
-              <script
-                src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-                data-key="pk_test_RmNQaoh72J9k4zy2rKJDLrZf"
-                data-amount="<?php echo "$".$sum;?>"
-                data-name="DJ SALAD"
-                data-description="ITS THE KEY"
-                data-image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9asvKOwkFkD54LMdgFLGm9M-yvvB4zHWjag1FcrbiFARJ1aC9gHBAd0r9Zg"
-                data-locale="auto">
-              </script>
+		<input type="submit" value="Continue to Payment"></input>
 	</form>
 </div>
 
