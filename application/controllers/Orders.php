@@ -21,7 +21,7 @@ class Orders extends CI_Controller {
 		// add stripe functionality here!
 		$this->load->model('Cart');
 		$this->Cart->emptyCart($this->session->userdata('currentUser')['id']);
-		$this->load->view('orderSuccessView');
+		$this->load->view('paymentView');
 		}
 
 	public function displayOrders() {
