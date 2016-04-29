@@ -25,8 +25,8 @@
 
     <!-- Page Content -->
     <div class="container">
-
-        we da best
+        <h2>FIND US SOMEWHERE HERE</h2>
+        <img src="https://maps.googleapis.com/maps/api/staticmap?center=codingdojo,burbank&size=500x500">
     </div>
     <!-- /.container -->
 
