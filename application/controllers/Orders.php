@@ -7,19 +7,19 @@ class Orders extends CI_Controller {
 		$this->load->view('orderDetailsView');
 	}
 	
-	// public function placeOrder() {
-	// 	//add both shipping and billing addresses into db from form data
-	// 	$this->load->model('Order');
-	// 	$SA = $this->Order->addShippingAddress($this->input->post());
-	// 	if(isset($this->input->post('sameAsShipping'))) {
-	// 		$BA = $this->Order->shippingIsBilling($this->input->post());
-	// 	}
-	// 	else {
-	// 		$BA = $this->Order->addBillingAddress($this->input->post());
-	// 	}
-	// 	$this->Order->addOrder($SA, $BA);
-	// 	// add stripe functionality here!
-	// }
+	public function placeOrder() {
+		//add both shipping and billing addresses into db from form data
+		$this->load->model('Order');
+		$SA = $this->Order->addShippingAddress($this->input->post());
+		if(!$this->input->post('sameAsShipping')) {
+			$BA = $this->Order->shippingIsBilling($this->input->post());
+		}
+		else {
+			$BA = $this->Order->addBillingAddress($this->input->post());
+		}
+		$this->Order->addOrder($SA, $BA);
+		// add stripe functionality here!
+	}
 
 	public function displayOrders() {
 		$this->load->model('Order');

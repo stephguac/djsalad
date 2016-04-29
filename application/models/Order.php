@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Order extends CI_Model 
 {
 	public function addOrder($SA, $BA) {
-		$sql = "INSERT INTO orders (user_id, created_at, updated_at, billing_address_id, total, status) VALUES (?, NOW(), NOW(), ?, ?, 1)";
+		$sql = "INSERT INTO orders (user_id, created_at, updated_at, shipping_address, billing_address_id, total, status) VALUES (?, NOW(), NOW(), ?, ?, 1)";
 		$params = [
 			$this->session->userdata('currentUser')['id'],
 			$SA['id'],
@@ -82,6 +82,7 @@ class Order extends CI_Model
 	}
 
 	public function changeOrderStatus($orderID, $newStatus) {
+
 		$sql = "UPDATE orders SET orders.status = $newStatus WHERE orders.id = $orderID";
 		$params = [
 			$orderID
