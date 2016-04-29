@@ -4,12 +4,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Order extends CI_Model 
 {
 	public function addOrder($SA, $BA) {
-		$sql = "INSERT INTO orders (user_id, created_at, updated_at, shipping_address, billing_address_id, total, status) VALUES (?, NOW(), NOW(), ?, ?, 1)";
+		$sql = "INSERT INTO orders (user_id, created_at, updated_at, shipping_address_id, billing_address_id, status) VALUES (?, NOW(), NOW(), ?, ?, 1)";
 		$params = [
 			$this->session->userdata('currentUser')['id'],
 			$SA['id'],
 			$BA['id'],
-			$orderData['total'],  // this might need to be added to the DataBase
 		];
 		$this->db->query($sql, $params);
 	}
@@ -42,19 +41,23 @@ class Order extends CI_Model
 
 		}
 	}
+
 	public function addShippingAddress($input) {
 		$sql = "INSERT INTO addresses (user_id, type, address, city, state, zipcode) VALUES (?, 'shipping', ?, ?, ?, ?)";
 
-			$params = [
+		$params = [
 			$this->session->userdata('currentUser')['id'],
 			$input['addressS'],
 			$input['cityS'],
 			$input['stateS'],
 			$input['zipcodeS'],
 		];
-
-		return $this->db->query($sql, $params);
+		$this->db->query($sql, $params);
+		$insertedID = $this->db->insert_id();
+		$sql2 = "SELECT * FROM addresses WHERE id = $insertedID";
+		return $this->db->query($sql2)->row_array();
 	}
+
 	public function shippingIsBilling($input) {
 		$sql = "INSERT INTO addresses (user_id, type, address, city, state, zipcode) VALUES (?, 'billing', ?, ?, ?, ?)";
 		$params = [
@@ -64,7 +67,10 @@ class Order extends CI_Model
 			$input['stateS'],
 			$input['zipcodeS'],
 		];
-		return $this->db->query($sql, $params);		
+		return $this->db->query($sql, $params);
+		$insertedID = $this->db->insert_id();
+		$sql2 = "SELECT * FROM addresses WHERE id = $insertedID";
+		return $this->db->query($sql2)->row_array();		
 	}
 
 	public function addBillingAddress($input) {
@@ -76,7 +82,10 @@ class Order extends CI_Model
 			$input['stateB'],
 			$input['zipcodeB'],
 		];
-		$this->db->query($sql, $params);		
+		return $this->db->query($sql, $params);
+		$insertedID = $this->db->insert_id();
+		$sql2 = "SELECT * FROM addresses WHERE id = $insertedID";
+		return $this->db->query($sql2)->row_array();			
 	}
 
 	public function changeOrderStatus($orderID, $newStatus) {

@@ -57,12 +57,11 @@
 	<div>
 		<a href="/"><button>Continue Shopping</button></a>
 	</div>
-		<form action="address" method="post">
+		<form action="/Orders/placeOrder" method="post">
 			<h2>Shipping Information</h2>
 				First Name: <input type="text" name="firstNameS"><br>
 				Last Name: <input type="text" name="lastNameS"><br>
 				Address: <input type="text" name="addressS"><br>
-				Address 2: <input type="text" name="address2S"><br>
 				City: <input type="text" name="cityS"><br>
 				State: <input type="text" name="stateS"><br>
 				Zipcode: <input type="text" name="zipcodeS"><br>
@@ -71,7 +70,6 @@
 				First Name: <input type="text" name="firstNameB"><br>
 				Last Name: <input type="text" name="lastNameB"><br>
 				Address: <input type="text" name="addressB"><br>
-				Address 2: <input type="text" name="address2B"><br>
 				City: <input type="text" name="cityB"><br>
 				State: <input type="text" name="stateB"><br>
 				Zipcode: <input type="text" name="zipcodeB"><br>
