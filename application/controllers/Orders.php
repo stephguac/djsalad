@@ -7,7 +7,7 @@ class Orders extends CI_Controller {
 		$this->load->view('orderDetailsView');
 	}
 	
-	public function placeOrder() {
+	public function placeOrder($total) {
 		//add both shipping and billing addresses into db from form data
 		$this->load->model('Order');
 		$SA = $this->Order->addShippingAddress($this->input->post());
@@ -17,7 +17,7 @@ class Orders extends CI_Controller {
 		else {
 			$BA = $this->Order->addBillingAddress($this->input->post());
 		}
-		$this->Order->addOrder($SA, $BA);
+		$this->Order->addOrder($SA, $BA, $total);
 		// add stripe functionality here!
 		$this->load->model('Cart');
 		$this->Cart->emptyCart($this->session->userdata('currentUser')['id']);

@@ -3,12 +3,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Order extends CI_Model 
 {
-	public function addOrder($SA, $BA) {
-		$sql = "INSERT INTO orders (user_id, created_at, updated_at, shipping_address_id, billing_address_id, status) VALUES (?, NOW(), NOW(), ?, ?, 1)";
+	public function addOrder($SA, $BA, $total) {
+		$sql = "INSERT INTO orders (user_id, created_at, updated_at, shipping_address_id, billing_address_id, status, total) VALUES (?, NOW(), NOW(), ?, ?, 1, ?)";
 		$params = [
 			$this->session->userdata('currentUser')['id'],
 			$SA['id'],
 			$BA['id'],
+			$total
 		];
 		$this->db->query($sql, $params);
 	}

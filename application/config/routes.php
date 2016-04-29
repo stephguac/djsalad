@@ -67,5 +67,6 @@ $route['Carts/r/(:num)'] = 'Carts/removeItem/$1';
 $route['Inventory'] = 'Inventories/index';
 
 $route['Orders'] = 'orders/displayOrders';
+$route['Orders/placeOrder/(:num)'] = 'Orders/placeOrder/$1';
 $route['ChangeStatus/(:num)'] = 'Orders/changeOrderStatus/$1';
 // $route['Orders/changeOrderStatus/(:num)'] = 'Orders/changeOrderStatus/$1';

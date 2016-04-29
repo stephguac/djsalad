@@ -56,7 +56,7 @@
 	<div>
 		<br><br><a href="/"><button>Continue Shopping</button></a><br><hr><br>
 	</div>
-	<form action="/Orders/placeOrder" method="post" style='margin-left: 10px'>
+	<form action="/Orders/placeOrder/$sum" method="post" style='margin-left: 10px'>
 		<h2>Shipping Information</h2><br>
 		<div class='form-group row'>
 			<label for='inputName1' class='col-sm-1 form-control-label'>First Name</label>
