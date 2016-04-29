@@ -132,3 +132,9 @@ h1 {
 .pull-right {
     margin-right: 20px;
 }
+
+#banner {
+    position: absolute;
+    top: 1000px;
+    left: 500px;
+}

@@ -68,6 +68,8 @@
         </div>
         <!-- /.container -->
 
+        <img id="banner" src="http://www.f1autocentres.co.uk/images/banner-all-season-tyres.jpg">
+
         <div class="container">
 
             <hr>
