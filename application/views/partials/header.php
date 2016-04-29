@@ -54,8 +54,15 @@
                              </div>
                         </li>
                     </ul>
-                <li>
-                        <a href="/Carts/index">My Cart</a>
+                    <li>
+                        <a href="/Carts/index">My Cart
+(<?php
+                    if ($this->session->userdata("currentUser")) {
+                        echo $this->session->userdata("currentUser")['first_name'];
+                    } else {
+                        echo "Guest";
+                    }
+?>)</a>
                     </li>
                 </ul>
             </div>

@@ -62,4 +62,8 @@ class Cart extends CI_Model {
 		];
 		return $this->db->query($sql, $params)->result_array();
 	}
+
+	// public function emptyCart() {
+		
+	// }
 }
