@@ -15,7 +15,7 @@ class Inventory extends CI_Model {
 			$formData['price'],
 			$formData['remaining'],
 			$formData['sold'],	
-			$formData2['full_path'],
+			$formData2['file_name'],
 		];
 		$this->db->query($sql, $params);
 	}

@@ -9,7 +9,16 @@
 	</style>
 </head>
 <body>
-<
+
+
+
+<?php
+		foreach ($orderDetailsArray as $order) {
+
+		}
+?>
+
+
 	<div>
 		<form>
 			<input type="search" name="search" value="Search"></input>

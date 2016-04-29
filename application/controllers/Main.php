@@ -37,6 +37,7 @@ class Main extends CI_Controller {
 	}
 
 	public function adminView() {
+		
 		$this->load->view('adminLoginView');
 	}
 
@@ -44,6 +45,9 @@ class Main extends CI_Controller {
 		$this->load->view('searchView');
 	}
 
+	public function inventoryView() {
+		$this->load->view('inventoryDashboardView');
+}
 
 	public function productSortBy() {
 		// sorts tables by query

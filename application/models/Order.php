@@ -26,13 +26,15 @@ class Order extends CI_Model
 		];
 
 		$this->db->query($sql, $params);
-		// this is going to search the table with orders 
+		// this is going to search the table with orders
+		// not complete
 	}
 
 	public function filterOrders(){
 
 		return $this->db->query("SELECT * FROM orders")->result_array();
 		// this allows the user to filter orders by thier status 
+		// not complete
 	}
 
 	public function orderDetails(){
@@ -90,7 +92,10 @@ class Order extends CI_Model
 
 	public function changeOrderStatus($orderID, $newStatus) {
 
-		$sql = "UPDATE orders SET orders.status = $newStatus WHERE orders.id = $orderID";	
-		// joe's part? 
+		$sql = "UPDATE orders SET orders.status = $newStatus WHERE orders.id = $orderID";
+		$params = [
+			$orderID
+		];
+		return $this->db->query($sql, $params);
 	}
 }

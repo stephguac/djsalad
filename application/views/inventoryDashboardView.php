@@ -57,7 +57,7 @@
                         <tbody>
 <?php
                             foreach ($results as $val) {
-                                $image = '<img src="' . $val['image_1'] . '"height="150" width="150">';
+                                $image = '<img src="/uploads/' . $val['image_1'] . '"height="150" width="150">';
                                 $id = $val['id'];
                                 $title = $val['title'];
                                 $remaining = $val['quantity_remaining'];
@@ -101,7 +101,7 @@
             <div class="modal-body">
                 
         <!--    <form role="form" action="/inventories/addInventory" method="post"> -->
-                <form role"form" action="/Upload/do_upload" method="post" enctype="multipart/form-data">
+                <form role"form" action="/Uploads/do_upload" method="post" enctype="multipart/form-data">
                     <div class="form-group">
                         <label for="title">Title</label>
                         <input type="text" name="title" class="form-control" id="name" placeholder="Enter name"/>
