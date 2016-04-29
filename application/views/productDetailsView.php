@@ -39,10 +39,10 @@
             <div class="col-md-9">
 
                 <div class="thumbnail">
-                    <?= '<img src="' . $indivDetails['image_1'] . '"height="800" width="800">' ?>
+                    <?= "<img src='" . $indivDetails['image_1'] . "'height='800' width='800'>" ?>
                     <div class="caption-full">
-                        <h4 class="pull-right"><?= '$' . $indivDetails['price'] ?>
-                        <a href="/Carts/<?= $prod_id; ?>"><span class="btn btn-success">Add to Cart</span>
+                        <h4 class="pull-right"><?= '$' . $indivDetails['price']; ?>
+                        <a href="/Carts/a/<?= $prod_id; ?>"><span class="btn btn-success">Add to Cart</span>
                         </h4>
                         <h4><a href="#"><?= $indivDetails['title'] . ' by ' . $indivDetails['artist'] . ' (' . $indivDetails['genre'] . ') ' ; ?></a></h4>
                         <p class="description">

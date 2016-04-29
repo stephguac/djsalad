@@ -44,13 +44,15 @@ class Order extends CI_Model
 	}
 	public function addShippingAddress($input) {
 		$sql = "INSERT INTO addresses (user_id, type, address, city, state, zipcode) VALUES (?, 'shipping', ?, ?, ?, ?)";
-		$params = [
+
+			$params = [
 			$this->session->userdata('currentUser')['id'],
 			$input['addressS'],
 			$input['cityS'],
 			$input['stateS'],
 			$input['zipcodeS'],
 		];
+
 		return $this->db->query($sql, $params);
 	}
 	public function shippingIsBilling($input) {
@@ -75,5 +77,10 @@ class Order extends CI_Model
 			$input['zipcodeB'],
 		];
 		$this->db->query($sql, $params);		
-	}		
+	}
+
+	public function changeOrderStatus($orderID, $newStatus) {
+
+		$sql = "UPDATE orders SET orders.status = $newStatus WHERE orders.id = $orderID";	
+		// joe's part? 
 }
