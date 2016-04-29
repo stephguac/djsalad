@@ -5,7 +5,7 @@
     $this->load->view("partials/head.php");
     $this->load->view("partials/header.php");
 ?>
-    <title>Admin Login Page</title>
+    <title>Admin Login</title>
 
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -28,14 +28,23 @@
 
 </head>
     <body>
-        <div id=container>
+        <div class='container'>
             <form action="/Orders" method="POST">
-                <h3>Admin Login Page</h3>
+                <h3>Admin Login</h3>
                 <input type="text" name="email" placeholder="E-Mail"><br>
-                <input type="password" name="password" placeholder="Password"><br>
+                <input type="password" name="password" placeholder="Password"><br><br>
                 <input type="submit" value="Submit"><br>
             </form>
         </div>
-        
     </body>
+
+    <div class='container'>
+
+    <hr>
+
+<?php
+    $this->load->view("partials/footer.php");
+?>
 </html>
+
+
