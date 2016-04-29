@@ -33,7 +33,7 @@
 				$prod_id = $cd['product_id'];
 ?>
 			<tr>
-				<td><img src="<?= $url ?>" width='50' height='50'></td>
+				<td><img src="/uploads/<?= $url ?>" width='50' height='50'></td>
 				<td><?= $title ?></td>
 				<td><?= $artist ?></td>
 				<td><?= $genre ?></td>
