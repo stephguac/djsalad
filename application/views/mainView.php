@@ -50,13 +50,13 @@
                         // if ($results) {
                             foreach ($results as $val) {
 
-                                if(strlen($val['description']) > 95) $val['description'] = substr($val['description'], 0, 95).'...';
+                                if(strlen($val['description']) > 80) $val['description'] = substr($val['description'], 0, 80).'...';
 
                                 if(strlen($val['title']) > 22) $val['title'] = substr($val['title'], 0, 22).'...';
 
                                 echo "<div class='col-sm-4 col-lg-4 col-md-4'>";
                                 echo "<div class='thumbnail'>";
-                                echo '<img src="' . $val['image_1'] . '"height="320" width="320">';
+                                echo '<img src="/uploads/' . $val['image_1'] . '"height="320" width="320">';
                                 echo "<div class='caption'>";
                                 echo "<h4 class='pull-right'>$" . $val['price'] ."</h4>";
                                 echo "<h4><a href='/Product/" . $val['id'] ."'>" . $val['title'] . "<br/> by " . $val['artist'] ."</a></h4>";
