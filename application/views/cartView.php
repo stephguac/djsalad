@@ -55,31 +55,83 @@
 	</h4>
 	</div>
 	<div>
-		<a href="/"><button>Continue Shopping</button></a>
+		<br><br><a href="/"><button>Continue Shopping</button></a><br><hr><br>
 	</div>
-		<form action="/Orders/placeOrder" method="post">
-			<h2>Shipping Information</h2>
-				First Name: <input type="text" name="firstNameS"><br>
-				Last Name: <input type="text" name="lastNameS"><br>
-				Address: <input type="text" name="addressS"><br>
-				City: <input type="text" name="cityS"><br>
-				State: <input type="text" name="stateS"><br>
-				Zipcode: <input type="text" name="zipcodeS"><br>
-			<h2>Billing Information</h2>
-				<input type="checkbox" name="sameAsShipping"> Same as Shipping
-				First Name: <input type="text" name="firstNameB"><br>
-				Last Name: <input type="text" name="lastNameB"><br>
-				Address: <input type="text" name="addressB"><br>
-				City: <input type="text" name="cityB"><br>
-				State: <input type="text" name="stateB"><br>
-				Zipcode: <input type="text" name="zipcodeB"><br>
-			<br>
-				Card: <input type="text" name="card"><br>
-				Security Code: <input type="text" name="security"><br>
-				Expiration: <input type="month" name="expiration"><br>
-			<input type="submit" value="Pay"></input>
-		</form>
-	</div>
+
+	<form action="/Orders/placeOrder" method="post" style='margin-left: 10px'>
+		<h2>Shipping Information</h2><br>
+		<div class='form-group row'>
+			<label for='inputName1' class='col-sm-1 form-control-label'>First Name</label>
+			<div class="col-sm-4"><input type="text" class="form-control" id='inputName1' name="firstNameS" placeholder='First Name'/></div>
+		</div>
+		<div class='form-group row'>
+			<label for='inputName2' class='col-sm-1 form-control-label'>Last Name</label>
+			<div class="col-sm-4"><input type="text" class="form-control" id='inputName2' name="lastNameS" placeholder='Last Name'/></div>
+		</div>
+		<div class='form-group row'>
+			<label for='inputAddy1' class='col-sm-1 form-control-label'>Address</label>
+			<div class="col-sm-4"><input type="text" class="form-control" id='inputAddy1' name="addressS" placeholder='Address'/></div>
+		</div>
+		<div class='form-group row'>
+			<label for='inputCity1' class='col-sm-1 form-control-label'>City</label>
+			<div class="col-sm-4"><input type="text" class="form-control" id='inputCity1' name="cityS" placeholder='City'/></div>
+		</div>
+		<div class='form-group row'>
+			<label for='inputState1' class='col-sm-1 form-control-label'>State</label>
+			<div class="col-sm-4"><input type="text" class="form-control" id='inputState1' name="stateS" placeholder='State'/></div>
+		</div>
+		<div class='form-group row'>
+			<label for='inputZip1' class='col-sm-1 form-control-label'>Zipcode</label>
+			<div class="col-sm-4"><input type="text" class="form-control" id='inputZip1' name="zipcodeS" placeholder='Zipcode'/></div>
+		</div><br>
+		<input type="checkbox" name="sameAsShipping"> Same as Shipping<br><hr><br>
+
+
+		<h2>Billing Information</h2><br>
+		<div class='form-group row'>
+			<label for='inputName1b' class='col-sm-1 form-control-label'>First Name</label>
+			<div class="col-sm-4"><input type="text" class="form-control" id='inputName1b' name="firstNameB" placeholder='First Name'/></div>
+		</div>
+		<div class='form-group row'>
+			<label for='inputName2b' class='col-sm-1 form-control-label'>Last Name</label>
+			<div class="col-sm-4"><input type="text" class="form-control" id='inputName2b' name="lastNameB" placeholder='Last Name'/></div>
+		</div>
+		<div class='form-group row'>
+			<label for='inputAddy1b' class='col-sm-1 form-control-label'>Address</label>
+			<div class="col-sm-4"><input type="text" class="form-control" id='inputAddy1b' name="addressB" placeholder='Address'/></div>
+		</div>
+		<div class='form-group row'>
+			<label for='inputCity1b' class='col-sm-1 form-control-label'>City</label>
+			<div class="col-sm-4"><input type="text" class="form-control" id='inputCity1b' name="cityB" placeholder='City'/></div>
+		</div>
+		<div class='form-group row'>
+			<label for='inputState1b' class='col-sm-1 form-control-label'>State</label>
+			<div class="col-sm-4"><input type="text" class="form-control" id='inputState1b' name="stateB" placeholder='State'/></div>
+		</div>
+		<div class='form-group row'>
+			<label for='inputZip1b' class='col-sm-1 form-control-label'>Zipcode</label>
+			<div class="col-sm-4"><input type="text" class="form-control" id='inputZip1b' name="zipcodeB" placeholder='Zipcode'/></div>
+		</div><br><hr><br>
+
+
+		<div class='form-group row'>
+			<label for='cardz' class='col-sm-1 form-control-label'>Card</label>
+			<div class="col-sm-4"><input type="text" class="form-control" id='cardz' name="card" placeholder='Card Number'/></div>
+		</div>
+		<div class='form-group row'>
+			<label for='codez' class='col-sm-1 form-control-label'>Security Code</label>
+			<div class="col-sm-4"><input type="text" class="form-control" id='codez' name="expiration" placeholder='Security Code'/></div>
+		</div>
+		<div class='form-group row'>
+			<label for='expz' class='col-sm-1 form-control-label'>Expiration Date</label>
+			<div class="col-sm-4"><input type="month" class="form-control" id='expz' name="expiration" placeholder='Card Number'/></div>
+		</div>
+		<input type="submit" value="Pay">
+
+	</form>
+
+
+
 </body>
 
 <div class='container'>
