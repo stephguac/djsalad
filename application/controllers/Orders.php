@@ -11,7 +11,7 @@ class Orders extends CI_Controller {
 		$this->load->model('Order');
 		$result = $this->Order->getOrders();
 		$data['orderArray'] = $result;
-		$this->load->view('orderDetailsView', $data);
+		$this->load->view('orderDashboardView', $data);
 		// populate everyones orders table from db
 	}
 
@@ -35,10 +35,12 @@ class Orders extends CI_Controller {
 		// filter orders - order in, shipped, cancelled. process from form data dropdown menu
 	}
 
-	public function changeOrderStatus() {
+	public function changeOrderStatus($oID) {
 		//process dropdown form data to change order status in db
-		$this->load->model('order');
-		$this->order->changeOrderStatus($this->input->post());
+		$this->load->model('Order');
+		$status = $this->input->post()['status'];
+		$this->Order->changeOrderStatus($oID , $status);
+		redirect('/');
 	}
 
 	public function displayOrderDetails() {
@@ -46,3 +48,11 @@ class Orders extends CI_Controller {
 		//get details of specified order from db. this might need to be two functions - one for the table? idk whatevers easier for you.
 	}
 }
+
+
+
+
+
+
+
+

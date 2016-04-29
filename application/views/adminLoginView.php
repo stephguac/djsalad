@@ -29,7 +29,7 @@
 </head>
     <body>
         <div id=container>
-            <form action="/admins/adminLogin" method="POST">
+            <form action="/Orders" method="POST">
                 <h3>Admin Login Page</h3>
                 <input type="text" name="email" placeholder="E-Mail"><br>
                 <input type="password" name="password" placeholder="Password"><br>

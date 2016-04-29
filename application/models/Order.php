@@ -44,10 +44,12 @@ class Order extends CI_Model
 		}
 	}
 	public function changeOrderStatus($orderID, $newStatus) {
+
 		$sql = "UPDATE orders SET orders.status = $newStatus WHERE orders.id = $orderID";
 		$params = [
 			$orderID
 		];
+
 		return $this->db->query($sql, $params);
 	}
 }
